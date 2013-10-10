@@ -1,0 +1,161 @@
+@font-face {
+  font-family: PTSerif;
+  font-weight: normal;
+  font-style: normal;
+  src: url("http://impactgit.wpengine.com/parlan/fonts/PTSerif/PTF55F-webfont.eot");
+  src: url("http://impactgit.wpengine.com/parlan/fonts/PTSerif/PTF55F-webfont.eot?#iefix") format("embedded-opentype"), url("http://impactgit.wpengine.com/parlan/fonts/PTSerif/PTF55F-webfont.woff") format("woff"), url("http://impactgit.wpengine.com/parlan/fonts/PTSerif/PTF55F-webfont.ttf") format("truetype"), url("http://impactgit.wpengine.com/parlan/fonts/PTSerif/PTF55F-webfont.svg#PTSerif") format("svg"); }
+
+@font-face {
+  font-family: PTSans;
+  font-weight: normal;
+  font-style: normal;
+  src: url("http://impactgit.wpengine.com/parlan/fonts/PTSans/PTS55F-webfont.eot");
+  src: url("http://impactgit.wpengine.com/parlan/fonts/PTSans/PTS55F-webfont.eot?#iefix") format("embedded-opentype"), url("http://impactgit.wpengine.com/parlan/fonts/PTSans/PTS55F-webfont.woff") format("woff"), url("http://impactgit.wpengine.com/parlan/fonts/PTSans/PTS55F-webfont.ttf") format("truetype"), url("http://impactgit.wpengine.com/parlan/fonts/PTSans/PTS55F-webfont.svg#PTSans") format("svg"); }
+
+body {
+  font-family: PTSans, sans-serif;
+  font-size: 1em; }
+
+h1, h2, h3, h4 {
+  font-family: PTSerif, serif; }
+
+h1 {
+  font-size: 2.875em; }
+
+h2 {
+  font-size: 2.25em; }
+
+h3 {
+  font-size: 1.75em; }
+
+h4 {
+  font-size: 1.25em; }
+
+.blue {
+  color: #263a58; }
+
+.green {
+  color: #287114; }
+
+/* White Outlined Button */
+.white-btn-outline {
+  border-radius: 2px;
+  border: 2px solid #f9f9f9;
+  color: #f9f9f9;
+  font-family: PTSerif, serif;
+  display: block;
+  text-align: center;
+  padding: 0.5em;
+  font-size: 1em; }
+  .white-btn-outline:hover {
+    text-decoration: none;
+    color: #287114;
+    background: #f9f9f9; }
+
+body {
+  background: #f9f9f9;
+  color: #222222;
+  margin: 0 auto; }
+
+header {
+  background: #222222;
+  color: #f9f9f9; }
+  header .menu {
+    font-family: PTSerif, serif; }
+    header .menu ul {
+      list-style: none; }
+      header .menu ul li {
+        display: inline-block;
+        padding: 0 0.25em; }
+        header .menu ul li a {
+          color: #f9f9f9;
+          text-decoration: none;
+          text-transform: uppercase; }
+          header .menu ul li a:hover {
+            padding-bottom: 0.15em;
+            border-bottom: #f9f9f9 2px solid; }
+  header .phone h3 {
+    font-size: 1.45em;
+    margin: 0; }
+
+.client-login {
+  font-size: 1em; }
+  .client-login a {
+    text-decoration: none; }
+
+ul {
+  list-style-position: inside; }
+
+.container-fluid {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.value-prop {
+  background: url(../assets/value-prop-bg.jpg) no-repeat;
+  background-size: cover;
+  padding: 4em 0; }
+  .value-prop h1 {
+    margin-top: 0;
+    color: #263a58; }
+  .value-prop p {
+    margin-left: 5em;
+    margin-right: 5em; }
+
+.banner-cta {
+  border-top: #287114 5px solid;
+  padding: 2em 0;
+  background: url(../assets/get-aquainted-bg.jpg) no-repeat;
+  background-size: cover; }
+
+.buyerpersona-blog {
+  background: #263a58;
+  color: #f9f9f9;
+  padding: 2em 0; }
+  .buyerpersona-blog a {
+    color: #f9f9f9; }
+  .buyerpersona-blog .media .pull-left {
+    max-width: 25%;
+    margin: 0 1em 1em 0; }
+
+.parlan-process {
+  background: #f9f9f9;
+  padding: 3em 0; }
+  .parlan-process h2 {
+    border-bottom: #263a58 2px solid;
+    padding-bottom: 0.5em;
+    margin-bottom: 1.5em; }
+
+.trading-news {
+  border-top: #263a58 5px solid;
+  border-bottom: #263a58 5px solid;
+  padding: 3em 0;
+  background: url(../assets/trading-news-bg.jpg) no-repeat;
+  background-size: cover;
+  color: #f9f9f9; }
+
+.location-footer {
+  background: url(../assets/toledo-location.jpg) no-repeat;
+  background-size: cover;
+  color: #f9f9f9;
+  padding: 10em 0; }
+  .location-footer h2 {
+    margin: 0;
+    font-size: 4em; }
+  .location-footer h4 {
+    margin: 0;
+    font-size: 1.5em; }
+
+.footer {
+  background: #222222;
+  color: #f9f9f9; }
+
+.sub-footer {
+  background: #111111;
+  color: #4c4b4b; }
+  .sub-footer p {
+    padding-top: 0.5em; }
+  .sub-footer a {
+    color: #4c4b4b; }
+    .sub-footer a:hover {
+      color: #4c4b4b;
+      text-decoration: underline; }

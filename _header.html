@@ -1,0 +1,43 @@
+<header>
+    <div class="header-container-wrapper">
+        <div class="header-container container-fluid">
+            <div class="row-fluid-wrapper row-depth-2 row-number-1">
+            <div class="row-fluid">
+                <div class="span4 widget-span widget-type-logo" data-widget-type="logo">
+                    <div class="cell-wrapper layout-widget-wrapper">
+                        {% linked_image "logo_image" label="Logo", src="{{ site_settings.logo_src }}", link="{{ site_settings.company_domain }}" %}
+                    </div><!--end layout-widget-wrapper -->
+                </div><!--end logo-span -->
+                <div class="span2 offset2">
+                    <div class="phone">
+                        <h3>(419) 885-1130</h3>
+                    </div>
+                </div>
+                <div class="span2">
+                    <div class="client-login">
+                        <a href="#" class="white-btn-outline">Client Login</a>
+                    </div>
+                </div>
+                <div class="span2">
+                    <div class="search">
+                        {% google_search "parlan_search" label="Parlan Search", prefill_input_with_pathname=False %}
+                    </div>
+                </div>
+            <div class="row-fluid-wrapper row-depth-2 row-number-2">
+            <div class="row-fluid">
+                <div class="span8 offset4">
+                    <div class="cell-wrapper layout-widget-wrapper">
+                        <div class="menu">
+                            {% menu "header_menu" label="Header Menu", flow="horizontal", max_levels=4, root_key=None, root_type="site_root", site_map_name="default" %}
+                        </div><!-- END header-menu -->
+                    </div>
+                </div>
+            </div><!-- END row-->
+            </div><!-- END row-wrapper -->
+    
+        </div><!-- END header -->
+    </div><!-- END header wrapper -->
+</div>
+</div>
+    {{standard_header_includes}}
+</header>

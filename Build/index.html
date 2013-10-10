@@ -1,0 +1,477 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en">        <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en">               <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="company">
+    <meta name="description" content="None">
+    <meta name="generator" content="HubSpot">
+    <title></title>
+    <link rel="shortcut icon" href="http://cdn1.hubspot.com/hub/151035/vanilla.jpg" />
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">hsjQuery = window['jQuery']</script>
+    <link href="https://static.hsappstatic.net/content_shared_assets/static-1.3156/css/public_common.css" rel="stylesheet" >
+    <meta property="og:description" content="">
+    <meta property="og:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:title" content="">
+    <link rel="canonical" href="http://hs.domain.com/cd21d08a-20ac-4872-bcea-fc726758b733" />
+
+    
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+    <!--[if lt IE 9]>
+    <script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="stylesheet" href="http://parlan.dev/css/custom.css">    
+    <link rel="stylesheet" href="http://parlan.dev/css/bootstrap-responsive.min.css">
+
+</head>
+<body>
+    
+    <header>
+    <div class="header-container-wrapper">
+        <div class="header-container container-fluid">
+            <div class="row-fluid-wrapper row-depth-2 row-number-1">
+            <div class="row-fluid">
+                <div class="span4 widget-span widget-type-logo" data-widget-type="logo">
+                    <div class="cell-wrapper layout-widget-wrapper">
+                        {% linked_image "logo_image" label="Logo", src="{{ site_settings.logo_src }}", link="{{ site_settings.company_domain }}" %}
+                    </div><!--end layout-widget-wrapper -->
+                </div><!--end logo-span -->
+                <div class="span2 offset2">
+                    <div class="phone">
+                        <h3>(419) 885-1130</h3>
+                    </div>
+                </div>
+                <div class="span2">
+                    <div class="client-login">
+                        <a href="#" class="white-btn-outline">Client Login</a>
+                    </div>
+                </div>
+                <div class="span2">
+                    <div class="search">
+                        {% google_search "parlan_search" label="Parlan Search", prefill_input_with_pathname=False %}
+                    </div>
+                </div>
+            <div class="row-fluid-wrapper row-depth-2 row-number-2">
+            <div class="row-fluid">
+                <div class="span8 offset4">
+                    <div class="cell-wrapper layout-widget-wrapper">
+                        <div class="menu">
+                            {% menu "header_menu" label="Header Menu", flow="horizontal", max_levels=4, root_key=None, root_type="site_root", site_map_name="default" %}
+                        </div><!-- END header-menu -->
+                    </div>
+                </div>
+            </div><!-- END row-->
+            </div><!-- END row-wrapper -->
+    
+        </div><!-- END header -->
+    </div><!-- END header wrapper -->
+</div>
+</div>
+    {{standard_header_includes}}
+</header>
+    
+    <div class="body-container-wrapper">
+    <div class="body-container">
+            <div class="row-fluid-wrapper">
+                <div class="value-prop">
+                    <div class="container-fluid">
+                        <div class="row-fluid">
+                            <div class="span7">
+                                {% widget_block rich_text "value_text" label="Value Prop" %}
+                                    {% widget_attribute "html" %}
+                                        <h1>Control Risk & Enhance Your Investment Performance</h1>
+                                        <h3>Using Proven and Proprietary Algorithms, Parlan Actively Manages Your Investment.</h3>
+                                        <p class="blue">Meet Helyn, our Chief Investment Officer, and get acquainted with Parlan Financial Corporation through our introductory video.</p>
+                                    {% end_widget_attribute %}
+                                {% end_widget_block %}
+                            </div>
+                            <div class="span5">
+                                {% widget_block rich_text "welcome_video" label="Welcome Video" %}
+                                    {% widget_attribute "html" %}
+                                        
+                                    {% end_widget_attribute %}
+                                {% end_widget_block %}
+                            </div>
+                        </div>
+                    </div><!-- END container-fluid -->
+                    </div>
+                </div><!-- End value-prop -->
+                <div class="banner-cta">
+                    <div class="row-fluid">
+                        <center>
+                            {% section_header "homeCTA_section_header" label="Hero Banner CTA", header="Let's Discuss The Future Of Your Investments", subheader="In a 45 minute phone meeting, we'll review your current investment status and strategize a plan that works for you. No pressure, no obligation, we're here to help." %}
+                            {% cta "homeBanner_cta" %}
+                            <!-- @todo Add Get Aquainted CTA Link -->
+                        </center>
+                    </div>
+                </div><!-- END banner-cta -->
+            </div>
+            
+            <div class="buyerpersona-blog">
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                        
+                        <div class="span4">
+                            <div class="media">
+
+                                <a class="pull-left" href="#">
+                                    {% linked_image "HomeRitaIcon_image" label="RIA Rita/Ron Icon" %}
+                                </a>
+                            
+                                <div class="media-body">
+                                    {% widget_block rich_text "HomeBuyerPersona1_text" label="RIA Rita/Ron" %}
+                                        {% widget_attribute "html" %}
+                                            <h3 class="media-heading">Parlan's Active Investment Management Strategy</h3>
+                                            
+                                            <div class="media">
+                                                <h4 class="serif">Positioned to benefit in up and down markets</h4>
+                                                <ul>
+                                                    <li>Long/Short Strategy within an algorithm</li>
+                                                    <li>Control from the Chief Investment Officer</li>
+                                                 </ul>
+                                                <a href="#">Read More >></a>
+                                            </div>
+                                        {% end_widget_attribute %}
+                                    {% end_widget_block %}
+                              </div>
+                            </div>
+                        </div>
+                        
+                        <div class="span4">
+                            <div class="media">
+
+                                <a class="pull-left" href="#">
+                                    {% linked_image "HomeBillIcon_image" label="Baby Boomer Icon" %}
+                                </a>
+                                
+                                <div class="media-body">
+                                    {% widget_block rich_text "HomeBuyerPersona2_text" label="Bill the Baby Boomer" %}
+                                        {% widget_attribute "html" %}
+                                            <h3 class="media-heading">Investment Management: What You Need to Know for Retirement</h3>
+                                        
+                                            <div class="media">
+                                                <h4 class="serif">Not All Investment Managers or Strategies are Equal</h4>
+                                                <ul>
+                                                    <li>How will your choices effect your retirement?</li>
+                                                    <li>Know the reality of the market</li>
+                                                </ul>
+                                                <a href="#">Read More >></a>
+                                            </div>
+                                        {% end_widget_attribute %}
+                                    {% end_widget_block %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="span4">
+                            <div class="media">
+
+                                <a class="pull-left" href="#">
+                                    {% linked_image "HomeFrankIcon_image" label="Family Office Icon" %}
+                                </a>
+
+                                <div class="media-body">
+                                    {% widget_block rich_text "HomeBuyerPersona3_text" label="Frank for a Family Office" %}
+                                        {% widget_attribute "html" %}
+                                            <h3 class="media-heading">Applying an Algorithm to Trading Can Yield Profitable Trading</h3>
+                                        
+                                            <div class="media">
+                                                <h4 class="serif">Using a proven strategy and process that does not need perfect timing</h4>
+                                                <ul>
+                                                    <li>Eliminate subjectivity</li>
+                                                    <li>Strategic approach to gaining potential profits</li>
+                                                </ul>
+                                                <a href="#">Read More >></a>
+                                            </div>
+                                        {% end_widget_attribute %}
+                                    {% end_widget_block %}
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- END row-fluid -->
+                    
+                <div class="row-fluid">    
+                        <div class="span6 offset3 white-btn-outline">
+                            {% cta "home_blog_cta" label="CTA Link To The Parlan Blog" %}
+                        </div>
+                </div><!-- END row-fluid -->
+            </div><!-- END container-fluid -->
+        </div><!-- End Buyer Persona Blog Section -->
+        
+        <div class="row-fuild">
+            <div class="parlan-process">
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                        <div class="span12 blue">
+                            <center>
+                                {% header "process_header" label="Parlan Process Header", header_tag="h2", value="Our Process as a Registered Investment Advisory Firm" %}
+                            </center>
+                        </div>
+                    </div>
+                    
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    {% linked_image "HomePhilosphyIcon_image" label="Philosophy Icon" %}
+                                </div>
+                                <div class="span9">
+                                    {% widget_block rich_text "HomeProcessPhilosophy_text" label="Philosophy Text" %}
+                                        {% widget_attribute "html" %}
+                                            <h3 class="blue">Philosophy</h3>
+                                            <p class="blue">Parlan Financial Corp. has had Active Management Strategies for over 15 years.</p>
+                                            <a href="#" class="blue">Read More >></a>
+                                        {% end_widget_attribute %}
+                                {% end_widget_block %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="span4">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    {% linked_image "HomeStrategyIcon_image" label="Strategy Icon" %}
+                                </div>
+                                <div class="span9">
+                                    {% widget_block rich_text "HomeProcessStrategy_text" label="Strategy Text" %}
+                                        {% widget_attribute "html" %}
+                                            <h3 class="blue">Strategy</h3>
+                                            <p class="blue">One of our strategies goes long and short, which attempts to make money in a rising or declining stock market.</p>
+                                            <a href="#" class="blue">Read More >></a>
+                                        {% end_widget_attribute %}
+                                    {% end_widget_block %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="span4">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    {% linked_image "HomeInvestmentApproachIcon_image" label="Investment Approach Icon" %}
+                                </div>
+                                <div class="span9">
+                                    {% widget_block rich_text "HomeProcessInvestmentApproach_text" label="Investment Approach Text" %}
+                                        {% widget_attribute "html" %}
+                                            <h3 class="blue">Investment Approach</h3>
+                                            <p class="blue">We use formulas and historical patterns within the algorithm to create the rules of engagement.</p>
+                                            <a href="#" class="blue">Read More >></a>
+                                        {% end_widget_attribute %}
+                                    {% end_widget_block %}
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End row-fluid -->
+                    
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    {% linked_image "HomeExposureRiskIcon_image" label="Exposure & Risk Control Icon" %}
+                                </div>
+                                <div class="span9">
+                                    {% widget_block rich_text "HomeProcessExposureRisk_text" label="Exposure & Risk Control Text" %}
+                                        {% widget_attribute "html" %}
+                                            <h3 class="blue">Exposure & Risk Control</h3>
+                                            <p class="blue">How we determine the potential risks while investing</p>
+                                            <a href="#" class="blue">Read More >></a>
+                                        {% end_widget_attribute %}
+                                    {% end_widget_block %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="span4">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    {% linked_image "HomeProcessPerformanceIcon_image" label="Performance Icon" %}
+                                </div>
+                                <div class="span9">
+                                    {% widget_block rich_text "HomeProcessPerformance_text" label="Performance Text" %}
+                                        {% widget_attribute "html" %}
+                                            <h3 class="blue">Performance</h3>
+                                            <p class="blue">Our strategy follows the S&P 500 index. Performance is verified by GIPS.</p>
+                                            <a href="#" class="blue">Read More >></a>
+                                        {% end_widget_attribute %}
+                                    {% end_widget_block %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="span4">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    {% linked_image "HomeProcessInvestmentIcon_image" label="Investment Team Icon" %}
+                                </div>
+                                <div class="span9">
+                                    {% widget_block rich_text "HomeProcessInvestment_text" label="Investment Team Text" %}
+                                        {% widget_attribute "html" %}
+                                            <h3 class="blue">Investment Team</h3>
+                                            <p class="blue">Meet Helyn, the CEO & Chief Investment Officer, who has over 35 years of experience in the industry.</p>
+                                            <a href="#" class="blue">Read More >></a>
+                                        {% end_widget_attribute %}
+                                    {% end_widget_block %}
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- END row-fluid -->    
+                </div><!-- END parlan-process -->
+            </div><!-- END container-fluid -->
+        </div><!-- End row-fluid -->
+
+        <div class="trading-news">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <center>
+                            <h2>Trading News</h2>
+                            <h4>It is no secret that behind every successful investment manager there is a written, measurable and repeatable investment strategy.<br />
+    View our investment strategy in action by following @HelynBolanis #timestamp tweets on twitter.</h4>
+                        </center>
+                    </div>
+                </div><!-- End row-fluid -->
+                <div class="row-fluid">
+                    <div class="span5">
+                        <div class="responsive-video">
+                            {% widget_block rich_text "tradingvideo_text" label="Place Trading Video Embed Code Here" %}
+                                {% widget_attribute "html" %}
+                            
+                                {% end_widget_attribute %}
+                            {% end_widget_block %}
+                        </div>
+                    </div>
+                    <div class="span6 offset1">
+                        <div class="trading-tweets">
+                            <img src='http://placehold.it/800x300&text=Trading+Tweets+Placeholder' width='800' height='300' alt='Trading Tweets Placeholder' />
+                            {% cta "tadingtweets_cta" label="Trading Tweets CTA" %}
+                        </div>
+                    </div>
+                </div><!-- END row-fluid -->
+            </div><!-- End container-fluid -->
+        </div><!-- End trading-news -->
+
+        <div class="home-ebook">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span3">
+                        {% linked_image "eBook_linked_image" label="eBook Image" %}
+                    </div>
+                    <div class="span8 offset1">
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    {% widget_block rich_text "HomeeBook_text" label="eBook Text" %}
+                                        {% widget_attribute "html" %}
+                                            <h2>Don't Have Another Sleepless Night Worrying About Managing Your Investments.</h2>
+                                            <h4 class="serif">Read this informational guide before your next trade.</h4>
+                                            <ul>
+                                                <li>Learn the 'rules' the pros follow</li>
+                                                <li>Tips & quotes with insight from our Chief Investment Officer</li>
+                                                <li>Released in October, our most up to date market tips</li>
+                                            </ul>
+                                        {% end_widget_attribute %}
+                                    {% end_widget_block %}
+                                </div>
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span4">
+                                    {% cta "download_cta" label="Dowload eBook CTA" %}
+                                </div>
+                                <div class="span4 offset2">
+                                    {% cta "view_cta" label="View All Resources CTA" %}
+                                </div>
+                            </div>
+                    </div>
+                </div><!-- END row-fluid -->
+            </div><!-- END container-fluid -->
+        </div><!-- END home-ebook-->
+
+        <div class="location-footer">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span8 offset2">
+                        <center>
+                            {% widget_block rich_text "location_text" label="Located in Toledo Text" %}
+                                {% widget_attribute "html" %}
+                                    <h2>Located in Toledo, OH</h2>
+                                    <h4>Parlan isn’t as separated from big city life as you may think.</h4>
+                                {% end_widget_attribute %}
+                            {% end_widget_block %}
+                        </center>
+                    </div>
+                </div><!-- END row-fluid -->
+            </div><!-- END container-fluid -->
+        </div><!-- END location-footer -->
+
+        <div class="footer">
+    <div class="row-fluid">
+        <div class="container-fluid">
+            <div class="span3">
+                <div class="footer-logo">
+                    {% linked_image "logo_image" label="Logo", src="{{ site_settings.logo_src }}", link="{{ site_settings.company_domain }}" %}
+                </div>
+            </div>
+            <div class="span3">
+                <div class="footer-contact">
+                    <p>6011 Renaissance Place | Toledo, OH 43623</p>
+                    <p><span class="left">(800) 537-1103</span><span class="right">(419) 885-1130</span>
+                </div>
+            </div>
+            <div class="span3">
+                <div class="footer-social">
+                    
+                </div>
+            </div>
+            <div class="span3">
+                <div class="footer-subscribe">
+                    
+                </div>
+            </div>
+        </div>
+    </div><!-- END row-fluid -->
+     {{standard_footer_includes}}
+</div><!-- END footer -->
+<div class="sub-footer">
+    <div class="row-fluid">
+        <div class="container-fluid">
+            <div class="span12">
+                <center>
+                    <p>Website Design & Development by <a href="http://www.impactbnd.com" target="_blank">IMPACT Branding & Design</a></p>
+                </center>
+            </div>
+        </div>
+    </div>
+</div><!-- END sub-footer -->
+
+    </div><!-- End body-container -->
+    </div><!-- End body-container-wrapper -->
+    
+</body>
+</html>

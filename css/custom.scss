@@ -1,0 +1,167 @@
+@import "fonts";
+@import "colors";
+@import "buttons";
+
+body {
+    background: #f9f9f9;
+    color: $drkgrey;
+    margin: 0 auto;
+}
+
+header {
+    background: $drkgrey;
+    color: $offwhite;
+    
+    .menu {
+        font-family: PTSerif, serif;
+        
+        ul {
+            
+            list-style: none;
+            
+            li {
+                
+                display: inline-block;
+                padding: 0 0.25em;
+                
+                a {
+                    color: $offwhite;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    
+                    &:hover {
+                        padding-bottom: 0.15em;
+                        border-bottom: $offwhite 2px solid;
+                    }
+                }
+            }
+        }
+    }
+    
+    .phone {
+        
+        h3 {
+            font-size: 1.45em;
+            margin: 0;
+        }
+        
+    }
+}
+
+.client-login {
+    font-size: 1em;
+    
+    a {
+        text-decoration: none;
+    }
+}
+
+ul {
+    list-style-position: inside;
+}
+
+.container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-prop {
+    background: url(assets/value-prop-bg.jpg) no-repeat;
+    background-size: cover;
+    padding: 4em 0;
+    
+    h1 {
+        margin-top: 0;
+        color: $blue;
+    }
+    
+    p {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+}
+
+.banner-cta {
+    border-top: $green 5px solid;
+    padding: 2em 0;
+    background: url(assets/get-aquainted-bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+.buyerpersona-blog {
+    background: $blue;
+    color: $offwhite;
+    padding: 2em 0;
+    
+    a {
+        color: $offwhite;
+    }
+    
+    .media {
+        
+        .pull-left {
+            max-width: 25%;
+            margin: 0 1em 1em 0;
+        }
+    }
+}
+
+.parlan-process {
+    background: $offwhite;
+    padding: 3em 0;
+    
+    h2 {
+        border-bottom: $blue 2px solid;
+        padding-bottom: 0.5em;
+        margin-bottom: 1.5em;
+    }
+}
+
+.trading-news {
+    border-top: $blue 5px solid;
+    border-bottom: $blue 5px solid;
+    padding: 3em 0;
+    background: url(assets/trading-news-bg.jpg) no-repeat;
+    background-size: cover;
+    color: $offwhite;
+}
+
+.location-footer {
+    background: url(assets/toledo-location.jpg) no-repeat;
+    background-size: cover;
+    color: $offwhite;
+    padding: 10em 0;
+    
+    h2 {
+        margin: 0;
+        font-size: 4em;
+    }
+    
+    h4 {
+        margin: 0;
+        font-size: 1.5em;
+    }
+}
+
+.footer {
+    background: $drkgrey;
+    color: $offwhite;
+}
+
+.sub-footer {
+    background: $black;
+    color: $greyblack;
+    
+    p {
+        padding-top: 0.5em;
+    }
+    
+    a {
+        color: $greyblack;
+        
+        &:hover {
+            color: $greyblack;
+            text-decoration: underline;
+        }
+    }
+}

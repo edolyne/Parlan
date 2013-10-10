@@ -1,0 +1,22 @@
+/* White Outlined Button */
+
+.white-btn-outline {
+    border-radius: 2px;
+    border: 2px solid $offwhite;
+    color: $offwhite;
+    font-family: PTSerif, serif;
+    display: block;
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1em;
+    
+    &:hover {
+        text-decoration: none;
+        color: $green;
+        background: $offwhite;
+    }
+}
+
+    
+
+

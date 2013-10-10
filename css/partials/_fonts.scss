@@ -1,0 +1,27 @@
+@include font-face(PTSerif, 'http://impactgit.wpengine.com/parlan/fonts/PTSerif/PTF55F-webfont');
+@include font-face(PTSans, 'http://impactgit.wpengine.com/parlan/fonts/PTSans/PTS55F-webfont');
+
+body {
+    font-family: PTSans, sans-serif;
+    font-size: 1em;
+}
+
+h1,h2,h3,h4 {
+    font-family: PTSerif, serif;
+}
+
+h1 {
+    font-size: 2.875em;
+}
+
+h2 {
+    font-size: 2.25em;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+h4 {
+    font-size: 1.25em;
+}
