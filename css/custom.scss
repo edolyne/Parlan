@@ -11,6 +11,7 @@ body {
 header {
     background: $drkgrey;
     color: $offwhite;
+    padding: 2em 0 1em;
     
     .menu {
         font-family: PTSerif, serif;
@@ -18,11 +19,13 @@ header {
         ul {
             
             list-style: none;
+            text-align: right;
+            padding-left: 0;
             
             li {
                 
                 display: inline-block;
-                padding: 0 0.25em;
+                padding: 0 0 0 1.5em;
                 
                 a {
                     color: $offwhite;
@@ -43,8 +46,34 @@ header {
         h3 {
             font-size: 1.45em;
             margin: 0;
+            line-height: 1.85em;
         }
         
+    }
+
+    .search {
+
+        label {
+            display: none;
+        }
+
+        input {
+            width: 100%;
+            background: transparent;
+            margin: 0;
+            border-radius: 2px;
+            border: #f9f9f9 2px solid;
+            padding: 0.52em;
+            font-size: 1em;
+            color: $offwhite;
+            font-family: PTSerif, serif;
+            @include box-sizing(border-box);
+        }
+
+        a {
+            text-align: right;
+            float: right;
+        }
     }
 }
 
@@ -68,24 +97,57 @@ ul {
 .value-prop {
     background: url(assets/value-prop-bg.jpg) no-repeat;
     background-size: cover;
-    padding: 4em 0;
+    padding: 3em 0;
     
     h1 {
         margin-top: 0;
         color: $blue;
     }
+
+    h3 {
+        margin: 1.5em 0;
+    }
     
     p {
-        margin-left: 5em;
+        margin-left: 7em;
         margin-right: 5em;
+
+        &:after {
+            content: url(../assets/value-prop-arrow.png);
+            display: inline-block;
+            float: right;
+            top: -0.625em;
+            position: relative;
+        }
     }
 }
 
 .banner-cta {
     border-top: $green 5px solid;
-    padding: 2em 0;
+    padding: 3em 0;
     background: url(assets/get-aquainted-bg.jpg) no-repeat;
     background-size: cover;
+
+    h2 {
+        color: $green;
+        border-bottom: $green 2px solid;
+        padding-bottom: 0.35em;
+        margin-top: 0;
+    }
+
+    h5 {
+        margin: 1em 2em;
+    }
+
+    a {
+        @include grn-solid-btn;
+        width: 80%;
+        font-size: 1.5em;
+
+        &:hover {
+            @include grn-solid-btn-hover;
+        }
+    }
 }
 
 .buyerpersona-blog {
@@ -98,11 +160,52 @@ ul {
     }
     
     .media {
+
+        padding-bottom: 1em;
         
         .pull-left {
-            max-width: 25%;
+            max-width: 18%;
             margin: 0 1em 1em 0;
+            float: left;
+
+            img {
+                max-width: 100%;
+            }
         }
+
+        h3 {
+            font-size: 1.4em;
+            min-height: 84px;
+        }
+
+        h4 {
+            font-size: 1.15em;
+        }
+
+        ul {
+            padding-left: 0;
+        }
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoraton: underline;
+            }
+        }
+    }
+
+    .btn {
+
+        a {
+            @include white-btn-outline;
+            text-decoration: none;
+
+            &:hover {
+                @include white-btn-outline-hover;
+                color: $blue;
+           }
+       }
     }
 }
 
@@ -124,13 +227,35 @@ ul {
     background: url(assets/trading-news-bg.jpg) no-repeat;
     background-size: cover;
     color: $offwhite;
+
+    h5 {
+        font-size: 1.15em;
+    }
+
+    .trading-tweets {
+
+        img {
+            max-width: 100%;
+        }
+
+    }
+}
+
+.home-ebook {
+    h2 {
+        color: $blue;
+    }
+
+    ul {
+        padding-left: 0;
+    }
 }
 
 .location-footer {
     background: url(assets/toledo-location.jpg) no-repeat;
     background-size: cover;
     color: $offwhite;
-    padding: 10em 0;
+    padding: 6em 0;
     
     h2 {
         margin: 0;
@@ -146,6 +271,50 @@ ul {
 .footer {
     background: $drkgrey;
     color: $offwhite;
+
+    .footer-logo {
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .footer-contact {
+        p {
+            font-size: 0.9em;
+            margin: 0;
+
+            .left {
+                float: left;
+                font-size: 1.15em;
+            }
+
+            .right {
+                float: right;
+                font-size: 1.15em;
+            }
+        }
+    }
+
+    .footer-social {
+        ul {
+
+            list-style: none;
+
+            li {
+                display: inline-block;
+                width: 15.25%;
+
+                img {
+                    max-width: 100%;
+                }
+
+                a:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
 }
 
 .sub-footer {
@@ -158,6 +327,7 @@ ul {
     
     a {
         color: $greyblack;
+        text-decoration: none;
         
         &:hover {
             color: $greyblack;

@@ -58,38 +58,49 @@
     <header>
     <div class="header-container-wrapper">
         <div class="header-container container-fluid">
-            <div class="row-fluid-wrapper row-depth-2 row-number-1">
+            <div class="row-fluid-wrapper">
             <div class="row-fluid">
-                <div class="span4 widget-span widget-type-logo" data-widget-type="logo">
-                    <div class="cell-wrapper layout-widget-wrapper">
-                        {% linked_image "logo_image" label="Logo", src="{{ site_settings.logo_src }}", link="{{ site_settings.company_domain }}" %}
-                    </div><!--end layout-widget-wrapper -->
-                </div><!--end logo-span -->
-                <div class="span2 offset2">
-                    <div class="phone">
-                        <h3>(419) 885-1130</h3>
-                    </div>
+                <div class="well">
+                    <div class="span4 widget-span widget-type-logo" data-widget-type="logo">
+                        <div class="cell-wrapper layout-widget-wrapper">
+                            <a href="{{ site_settings.company_domain }}"><img src="http://impactgit.wpengine.com/parlan/assets/parlan-logo-light.png"></a>
+                        </div><!--end layout-widget-wrapper -->
+                    </div><!--end logo-span -->
                 </div>
-                <div class="span2">
-                    <div class="client-login">
-                        <a href="#" class="white-btn-outline">Client Login</a>
+                <div class="row-fluid">
+                    <div class="span2 offset2">
+                        <div class="well">
+                            <div class="phone">
+                                <h3>(419) 885-1130</h3>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="span2">
-                    <div class="search">
-                        {% google_search "parlan_search" label="Parlan Search", prefill_input_with_pathname=False %}
+                    <div class="span2">
+                        <div class="well">
+                            <div class="client-login">
+                                <a href="#" class="white-btn-outline">Client Login</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            <div class="row-fluid-wrapper row-depth-2 row-number-2">
-            <div class="row-fluid">
-                <div class="span8 offset4">
-                    <div class="cell-wrapper layout-widget-wrapper">
-                        <div class="menu">
-                            {% menu "header_menu" label="Header Menu", flow="horizontal", max_levels=4, root_key=None, root_type="site_root", site_map_name="default" %}
-                        </div><!-- END header-menu -->
+                    <div class="span2">
+                        <div class="well">
+                            <div class="search">
+                                {% google_search "parlan_search" label="Parlan Search", prefill_input_with_pathname=True %}
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div><!-- END row-->
+            <div class="row-fluid-wrapper">
+                <div class="row-fluid">
+                    <div class="span8">
+                        <div class="well">
+                            <div class="cell-wrapper layout-widget-wrapper">
+                                <div class="menu">
+                                    {% menu "header_menu" label="Header Menu", flow="horizontal", max_levels=4, root_key=None, root_type="site_root", site_map_name="header-menu" %}
+                                </div><!-- END header-menu -->
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- END row-->
             </div><!-- END row-wrapper -->
     
         </div><!-- END header -->
@@ -127,11 +138,19 @@
                 </div><!-- End value-prop -->
                 <div class="banner-cta">
                     <div class="row-fluid">
-                        <center>
-                            {% section_header "homeCTA_section_header" label="Hero Banner CTA", header="Let's Discuss The Future Of Your Investments", subheader="In a 45 minute phone meeting, we'll review your current investment status and strategize a plan that works for you. No pressure, no obligation, we're here to help." %}
-                            {% cta "homeBanner_cta" %}
-                            <!-- @todo Add Get Aquainted CTA Link -->
-                        </center>
+                        <div class="container-fluid">
+                            <div class="span10 offset1">
+                                <center>
+                                    {% widget_block rich_text "homeCTA_text" label="Hero Banner CTA" %}
+                                        {% widget_attribute "html" %}
+                                            <h2>Let's Discuss The Future Of Your Investments</h2>
+                                            <h6>In a 45 minute phone meeting, we'll review your current investment status and strategize a plan that works for you. No pressure, no obligation, we're here to help.</h6>
+                                        {% end_widget_attribute %}
+                                    {% end_widget_block %}
+                                    {% cta "homeBanner_cta" label="Get Aquainted CTA" %}
+                                </center>
+                            </div>
+                        </div>
                     </div>
                 </div><!-- END banner-cta -->
             </div>
@@ -153,7 +172,7 @@
                                             <h3 class="media-heading">Parlan's Active Investment Management Strategy</h3>
                                             
                                             <div class="media">
-                                                <h4 class="serif">Positioned to benefit in up and down markets</h4>
+                                                <h5>Positioned to benefit in up and down markets</h5>
                                                 <ul>
                                                     <li>Long/Short Strategy within an algorithm</li>
                                                     <li>Control from the Chief Investment Officer</li>
@@ -179,7 +198,7 @@
                                             <h3 class="media-heading">Investment Management: What You Need to Know for Retirement</h3>
                                         
                                             <div class="media">
-                                                <h4 class="serif">Not All Investment Managers or Strategies are Equal</h4>
+                                                <h5>Not All Investment Managers or Strategies are Equal</h5>
                                                 <ul>
                                                     <li>How will your choices effect your retirement?</li>
                                                     <li>Know the reality of the market</li>
@@ -205,7 +224,7 @@
                                             <h3 class="media-heading">Applying an Algorithm to Trading Can Yield Profitable Trading</h3>
                                         
                                             <div class="media">
-                                                <h4 class="serif">Using a proven strategy and process that does not need perfect timing</h4>
+                                                <h5>Using a proven strategy and process that does not need perfect timing</h5>
                                                 <ul>
                                                     <li>Eliminate subjectivity</li>
                                                     <li>Strategic approach to gaining potential profits</li>
@@ -220,8 +239,10 @@
                     </div><!-- END row-fluid -->
                     
                 <div class="row-fluid">    
-                        <div class="span6 offset3 white-btn-outline">
-                            {% cta "home_blog_cta" label="CTA Link To The Parlan Blog" %}
+                        <div class="span10 offset1">
+                            <div class="btn">
+                                {% cta "home_blog_cta" label="CTA Link To The Parlan Blog" %}
+                            </div>
                         </div>
                 </div><!-- END row-fluid -->
             </div><!-- END container-fluid -->
@@ -247,7 +268,7 @@
                                 <div class="span9">
                                     {% widget_block rich_text "HomeProcessPhilosophy_text" label="Philosophy Text" %}
                                         {% widget_attribute "html" %}
-                                            <h3 class="blue">Philosophy</h3>
+                                            <h4 class="blue">Philosophy</h4>
                                             <p class="blue">Parlan Financial Corp. has had Active Management Strategies for over 15 years.</p>
                                             <a href="#" class="blue">Read More >></a>
                                         {% end_widget_attribute %}
@@ -264,7 +285,7 @@
                                 <div class="span9">
                                     {% widget_block rich_text "HomeProcessStrategy_text" label="Strategy Text" %}
                                         {% widget_attribute "html" %}
-                                            <h3 class="blue">Strategy</h3>
+                                            <h4 class="blue">Strategy</h4>
                                             <p class="blue">One of our strategies goes long and short, which attempts to make money in a rising or declining stock market.</p>
                                             <a href="#" class="blue">Read More >></a>
                                         {% end_widget_attribute %}
@@ -281,7 +302,7 @@
                                 <div class="span9">
                                     {% widget_block rich_text "HomeProcessInvestmentApproach_text" label="Investment Approach Text" %}
                                         {% widget_attribute "html" %}
-                                            <h3 class="blue">Investment Approach</h3>
+                                            <h4 class="blue">Investment Approach</h4>
                                             <p class="blue">We use formulas and historical patterns within the algorithm to create the rules of engagement.</p>
                                             <a href="#" class="blue">Read More >></a>
                                         {% end_widget_attribute %}
@@ -300,7 +321,7 @@
                                 <div class="span9">
                                     {% widget_block rich_text "HomeProcessExposureRisk_text" label="Exposure & Risk Control Text" %}
                                         {% widget_attribute "html" %}
-                                            <h3 class="blue">Exposure & Risk Control</h3>
+                                            <h4 class="blue">Exposure & Risk Control</h4>
                                             <p class="blue">How we determine the potential risks while investing</p>
                                             <a href="#" class="blue">Read More >></a>
                                         {% end_widget_attribute %}
@@ -317,7 +338,7 @@
                                 <div class="span9">
                                     {% widget_block rich_text "HomeProcessPerformance_text" label="Performance Text" %}
                                         {% widget_attribute "html" %}
-                                            <h3 class="blue">Performance</h3>
+                                            <h4 class="blue">Performance</h4>
                                             <p class="blue">Our strategy follows the S&P 500 index. Performance is verified by GIPS.</p>
                                             <a href="#" class="blue">Read More >></a>
                                         {% end_widget_attribute %}
@@ -334,7 +355,7 @@
                                 <div class="span9">
                                     {% widget_block rich_text "HomeProcessInvestment_text" label="Investment Team Text" %}
                                         {% widget_attribute "html" %}
-                                            <h3 class="blue">Investment Team</h3>
+                                            <h4 class="blue">Investment Team</h4>
                                             <p class="blue">Meet Helyn, the CEO & Chief Investment Officer, who has over 35 years of experience in the industry.</p>
                                             <a href="#" class="blue">Read More >></a>
                                         {% end_widget_attribute %}
@@ -352,9 +373,13 @@
                 <div class="row-fluid">
                     <div class="span12">
                         <center>
-                            <h2>Trading News</h2>
-                            <h4>It is no secret that behind every successful investment manager there is a written, measurable and repeatable investment strategy.<br />
-    View our investment strategy in action by following @HelynBolanis #timestamp tweets on twitter.</h4>
+                            {% widget_block rich_text "tradingnews_text" label="Trading News Header" %}
+                                {% widget_attribute "html" %}
+                                    <h2>Trading News</h2>
+                                    <h5>It is no secret that behind every successful investment manager there is a written, measurable and repeatable investment strategy.<br />
+            View our investment strategy in action by following @HelynBolanis #timestamp tweets on twitter.</h5>
+                                {% end_widget_attribute %}
+                            {% end_widget_block %}
                         </center>
                     </div>
                 </div><!-- End row-fluid -->
@@ -371,6 +396,7 @@
                     <div class="span6 offset1">
                         <div class="trading-tweets">
                             <img src='http://placehold.it/800x300&text=Trading+Tweets+Placeholder' width='800' height='300' alt='Trading Tweets Placeholder' />
+                            {% cta "my_cta" label="My Cta" %}
                             {% cta "tadingtweets_cta" label="Trading Tweets CTA" %}
                         </div>
                     </div>
@@ -390,7 +416,7 @@
                                     {% widget_block rich_text "HomeeBook_text" label="eBook Text" %}
                                         {% widget_attribute "html" %}
                                             <h2>Don't Have Another Sleepless Night Worrying About Managing Your Investments.</h2>
-                                            <h4 class="serif">Read this informational guide before your next trade.</h4>
+                                            <h5>Read this informational guide before your next trade.</h5>
                                             <ul>
                                                 <li>Learn the 'rules' the pros follow</li>
                                                 <li>Tips & quotes with insight from our Chief Investment Officer</li>
@@ -421,7 +447,7 @@
                             {% widget_block rich_text "location_text" label="Located in Toledo Text" %}
                                 {% widget_attribute "html" %}
                                     <h2>Located in Toledo, OH</h2>
-                                    <h4>Parlan isn’t as separated from big city life as you may think.</h4>
+                                    <h5>Parlan isn’t as separated from big city life as you may think.</h5>
                                 {% end_widget_attribute %}
                             {% end_widget_block %}
                         </center>
@@ -435,7 +461,7 @@
         <div class="container-fluid">
             <div class="span3">
                 <div class="footer-logo">
-                    {% linked_image "logo_image" label="Logo", src="{{ site_settings.logo_src }}", link="{{ site_settings.company_domain }}" %}
+                    <a href="{{ site_settings.company_domain }}"><img src="http://impactgit.wpengine.com/parlan/assets/parlan-logo-light.png"></a>
                 </div>
             </div>
             <div class="span3">
@@ -446,7 +472,14 @@
             </div>
             <div class="span3">
                 <div class="footer-social">
-                    
+                    <ul>
+                        <li><a href=""><img src="http://impactgit.wpengine.com/parlan/assets/linkedin-icon.png" alt="Linkedin"></a></li>
+                        <li><a href=""><img src="http://impactgit.wpengine.com/parlan/assets/twitter-icon.png" alt="Twitter"></a></li>
+                        <li><a href=""><img src="http://impactgit.wpengine.com/parlan/assets/facebook-icon.png" alt="Facebook"></a></li>
+                        <li><a href=""><img src="http://impactgit.wpengine.com/parlan/assets/youtube-icon.png" alt="Youtube"></a></li>
+                        <li><a href=""><img src="http://impactgit.wpengine.com/parlan/assets/pinterest-icon.png" alt="Pinterest"></a></li>
+                        <li><a href=""><img src="http://impactgit.wpengine.com/parlan/assets/google-plus-icon.png" alt="Google Plus"></a></li>
+                    </ul>
                 </div>
             </div>
             <div class="span3">

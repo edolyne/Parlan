@@ -6,7 +6,7 @@ body {
     font-size: 1em;
 }
 
-h1,h2,h3,h4 {
+h1,h2,h3,h4,h5 {
     font-family: PTSerif, serif;
 }
 
@@ -24,4 +24,13 @@ h3 {
 
 h4 {
     font-size: 1.25em;
+}
+
+h5 {
+	font-size: 1.25em;
+}
+
+h6 {
+	font-size: 1.25em;
+	font-family: PTSans, sans-serif;
 }

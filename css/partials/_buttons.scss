@@ -17,6 +17,57 @@
     }
 }
 
+/* Green Solid Button */
+
+
+/* Button Mixins */
+
+@mixin grn-solid-btn {
+    border-radius: 2px;
+    background: #358023;
+    background-image: -o-linear-gradient(-90deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.05) 100%);
+    background-image: -moz-linear-gradient(-90deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.05) 100%);
+    background-image: -webkit-linear-gradient(-90deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.05) 100%);
+    background-image: -ms-linear-gradient(-90deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.05) 100%);
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.05) 100%);
+    border: 1px solid #29661C;
+    -moz-box-shadow:    0px 1px 0px 0px #2A661C;
+    -webkit-box-shadow: 0px 1px 0px 0px #2A661C;
+    box-shadow:         0px 1px 0px 0px #2A661C;
+    display: block;
+    padding: 0.75em 1em;
+    font-size: 1.5em;
+    color: $offwhite;
+    text-decoration: none;
+    font-family: PTSerif, serif;
+}
+
+@mixin grn-solid-btn-hover {
+    background-image: -o-linear-gradient(-90deg, rgba(0,0,0,0.05) 0%, rgba(255,255,255,0.05) 100%);
+    background-image: -moz-linear-gradient(-90deg, rgba(0,0,0,0.05) 0%, rgba(255,255,255,0.05) 100%);
+    background-image: -webkit-linear-gradient(-90deg, rgba(0,0,0,0.05) 0%, rgba(255,255,255,0.05) 100%);
+    background-image: -ms-linear-gradient(-90deg, rgba(0,0,0,0.05) 0%, rgba(255,255,255,0.05) 100%);
+    background-image: linear-gradient(-180deg, rgba(0,0,0,0.05) 0%, rgba(255,255,255,0.05) 100%);
+}
+
+@mixin white-btn-outline {
+    border-radius: 2px;
+    border: $offwhite 2px solid !important;
+    color: $offwhite;
+    font-family: PTSerif, serif;
+    display: block;
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1em;
+    }
+
+@mixin white-btn-outline-hover {
+    text-decoration: none;
+    color: $green;
+    background: $offwhite;
+}
+
+
     
 
 
