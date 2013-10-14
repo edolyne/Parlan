@@ -47,10 +47,23 @@
     <!--[if lt IE 9]>
     <script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
+
     <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="{{ get_public_template_url("custom/page/css/custom.css") }}">
     
-    <link rel="stylesheet" href="http://parlan.dev/css/custom.css">    
-    <link rel="stylesheet" href="http://parlan.dev/css/bootstrap-responsive.min.css">
+    <!--<link rel="stylesheet" href="http://cdn1.hubspot.com/hub/210690/hub_generated/style_manager/1381433367545/custom/page/css/custom.min.css">-->
+
+    <script type="text/javascript" src="http://impactgit.wpengine.com/parlan/js/twitterFetcher_v10_min.js"></script>
+    <script src="http://impactgit.wpengine.com/parlan/js/jquery.fitvids.js"></script>
+    <script src="//fast.wistia.com/static/embed_shepherd-v1.js"></script>
+        
+        <script>
+        wistiaEmbeds.onFind(function(video) {
+          video.videoFoam(true);
+        });
+        </script>
+
 
 </head>
 <body>
@@ -395,9 +408,8 @@
                     </div>
                     <div class="span6 offset1">
                         <div class="trading-tweets">
-                            <img src='http://placehold.it/800x300&text=Trading+Tweets+Placeholder' width='800' height='300' alt='Trading Tweets Placeholder' />
-                            {% cta "my_cta" label="My Cta" %}
-                            {% cta "tadingtweets_cta" label="Trading Tweets CTA" %}
+                            <div id="timestamp-tweets"></div>
+                            <div class="solid-white-btn">{% cta "tadingtweets_cta" label="Trading Tweets CTA" %}</div>
                         </div>
                     </div>
                 </div><!-- END row-fluid -->
@@ -427,11 +439,17 @@
                                 </div>
                             </div>
                             <div class="row-fluid">
-                                <div class="span4">
-                                    {% cta "download_cta" label="Dowload eBook CTA" %}
-                                </div>
-                                <div class="span4 offset2">
-                                    {% cta "view_cta" label="View All Resources CTA" %}
+                                <div class="cta-btns">
+                                    <div class="span4">
+                                        <div class="blue-btn">
+                                            {% cta "download_cta" label="Dowload eBook CTA" %}
+                                        </div>
+                                    </div>
+                                    <div class="span4 offset1">
+                                        <div class="text-link">
+                                            {% cta "view_cta" label="View All Resources CTA" %}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                     </div>
@@ -484,7 +502,7 @@
             </div>
             <div class="span3">
                 <div class="footer-subscribe">
-                    
+                    {% form "email subscribe" label="Parlan News Subscription" %}
                 </div>
             </div>
         </div>
@@ -502,6 +520,32 @@
         </div>
     </div>
 </div><!-- END sub-footer -->
+
+        <script>
+            twitterFetcher.fetch('389760541759008768', 'timestamp-tweets', 4, true, false, handleTweets);
+
+              function handleTweets(tweets){
+                  var x = tweets.length;
+                  var n = 0;
+                  var element = document.getElementById('example4');
+                  var html = '<ul>';
+                  while(n < x) {
+                    html += '<li>' + tweets[n] + '</li>';
+                    n++;
+                  }
+                  html += '</ul>';
+                  element.innerHTML = html;
+              }
+
+
+        </script>
+
+        <script>
+            // Basic FitVids Test
+            $(".container").fitVids();
+            // Custom selector and No-Double-Wrapping Prevention Test
+            $(".container").fitVids({ customSelector: "iframe[src^='http://socialcam.com']"});
+        </script>
 
     </div><!-- End body-container -->
     </div><!-- End body-container-wrapper -->

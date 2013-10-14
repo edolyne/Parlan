@@ -15,6 +15,9 @@ header {
     
     .menu {
         font-family: PTSerif, serif;
+        text-align: right;
+        padding-top: 0.75em;
+        min-height: 2.1em;
         
         ul {
             
@@ -31,6 +34,8 @@ header {
                     color: $offwhite;
                     text-decoration: none;
                     text-transform: uppercase;
+                    padding: 0 !important;
+                    max-width: 100% !important;
                     
                     &:hover {
                         padding-bottom: 0.15em;
@@ -44,9 +49,10 @@ header {
     .phone {
         
         h3 {
-            font-size: 1.45em;
+            font-size: 1.25em;
+            font-style:italic;
             margin: 0;
-            line-height: 1.85em;
+            line-height: 2em;
         }
         
     }
@@ -90,7 +96,7 @@ ul {
 }
 
 .container-fluid {
-    max-width: 1200px;
+    max-width: 1080px;
     margin: 0 auto;
 }
 
@@ -105,12 +111,12 @@ ul {
     }
 
     h3 {
-        margin: 1.5em 0;
+        margin: 1.65em 0;
     }
     
     p {
-        margin-left: 7em;
-        margin-right: 5em;
+        margin-left: 5em;
+        margin-right: 3em;
 
         &:after {
             content: url(../assets/value-prop-arrow.png);
@@ -120,6 +126,11 @@ ul {
             position: relative;
         }
     }
+}
+
+.wistia_embed {
+    width: 100%;
+    min-height: 20.5em;
 }
 
 .banner-cta {
@@ -174,7 +185,7 @@ ul {
         }
 
         h3 {
-            font-size: 1.4em;
+            font-size: 1.3em;
             min-height: 84px;
         }
 
@@ -197,9 +208,13 @@ ul {
 
     .btn {
 
+        width: 50%;
+        margin: 0 auto;
+
         a {
             @include white-btn-outline;
-            text-decoration: none;
+                text-decoration: none;
+                
 
             &:hover {
                 @include white-btn-outline-hover;
@@ -212,11 +227,36 @@ ul {
 .parlan-process {
     background: $offwhite;
     padding: 3em 0;
+
+    .row-fluid {
+        margin: 1em 0;
+    }
     
     h2 {
         border-bottom: $blue 2px solid;
         padding-bottom: 0.5em;
         margin-bottom: 1.5em;
+        margin-top: 0;
+    }
+
+    img {
+        max-width: 90%;
+    }
+
+    h4 {
+        margin-top: 0;
+    }
+
+    p {
+        min-height: 60px;
+    }
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
@@ -234,14 +274,65 @@ ul {
 
     .trading-tweets {
 
-        img {
-            max-width: 100%;
+        #timestamp-tweets {
+
+            ul {
+                list-style: none;
+                padding-left: 0;
+
+                li {
+
+                    padding: 1em;
+
+                    &:nth-child(2n+1) {
+                        background: $blue-opacity;
+                    }
+                }
+            }
+
+            .tweet {
+                margin-bottom: 0.25em;
+                margin-top: 0;
+                font-size: 0.95em;
+            }
+
+            .timePosted {
+                margin: 0;
+                text-align: right;
+                font-size: 0.8em;
+            }
+
+            a {
+                color: $offwhite;
+            }
+
+            .interact {
+                display: none;
+            }
+
+        }
+
+        .solid-white-btn {
+            padding: 0.5em;
+            width: 50%;
+            margin: 0 auto;
         }
 
     }
 }
 
 .home-ebook {
+
+    padding: 4em 0;
+
+    .span3 {
+        text-align: right;
+    }
+
+    img {
+        max-width: 80%;
+    }
+
     h2 {
         color: $blue;
     }
@@ -249,10 +340,15 @@ ul {
     ul {
         padding-left: 0;
     }
+
+    .cta-btns {
+        margin: 2em 0 0;
+    }
 }
 
 .location-footer {
     background: url(assets/toledo-location.jpg) no-repeat;
+    background-position: center bottom;
     background-size: cover;
     color: $offwhite;
     padding: 6em 0;
@@ -269,10 +365,22 @@ ul {
 }
 
 .footer {
+    
+    height: 100%;
     background: $drkgrey;
     color: $offwhite;
+    padding: 0.25em 0;
+
+    .span3 {
+        @extend .footer;
+        display: inline-block !important;
+        vertical-align: middle;
+    }
 
     .footer-logo {
+
+        top: 0.2em;
+        position: relative;
 
         img {
             max-width: 100%;
@@ -280,18 +388,25 @@ ul {
     }
 
     .footer-contact {
+
+        top: 0.95em;
+        position: relative;
+
         p {
-            font-size: 0.9em;
+            font-size: 0.8em;
             margin: 0;
+            letter-spacing: 0.168px;
 
             .left {
                 float: left;
                 font-size: 1.15em;
+                letter-spacing: 0;
             }
 
             .right {
                 float: right;
                 font-size: 1.15em;
+                letter-spacing: 0;
             }
         }
     }
@@ -303,7 +418,7 @@ ul {
 
             li {
                 display: inline-block;
-                width: 15.25%;
+                width: 15%;
 
                 img {
                     max-width: 100%;
@@ -314,6 +429,68 @@ ul {
                 }
             }
         }
+    }
+
+    .footer-subscribe {
+
+        line-height: 68px;
+
+        h3 {
+            display: none;
+        }
+
+        label {
+            display: none;
+        }
+
+        .input {
+            width: 100%;
+            display: inline-block;
+        }
+
+        .hs_email {
+
+            width: 75%;
+            display: inline-block;
+
+        }
+
+        .hs_submit {
+            width: 24%;
+            display: inline-block;
+        }
+
+        .hs-input {
+            width: 100%;
+            background: transparent;
+            border: $offwhite 2px solid;
+            border-radius: 2px 0 0 2px;
+            color: $offwhite;
+            padding: 0.95em 0.5em;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .hs-button{
+            display: inline-block;
+            border: none;
+            color: $green;
+            text-align: center;
+            background: $offwhite;
+            padding: 0.95em 0.5em;
+            border-radius: 0 2px 2px 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            border: $offwhite 2px solid;
+
+            &:hover {
+                cursor:pointer;
+            }
+
+        }
+
     }
 }
 
@@ -335,3 +512,18 @@ ul {
         }
     }
 }
+
+
+/* Offset Override */
+
+.offset2 {
+    margin-left: 17.094017094017094% !important;
+}
+
+.offset1 {
+    margin-left: 8.547008547008547% !important;
+}
+
+/* IMPACT Custom Responsive Style */
+
+@import "responsive";
