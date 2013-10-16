@@ -1,0 +1,235 @@
+.fullWidth {
+    
+    .row-fluid-wrapper {
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+}
+
+.bodyWrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.header-container-wrapper {
+    background: $drkgrey;
+    color: $offwhite;
+    padding: 2em 0 1em;
+    
+    .menu {
+        font-family: PTSerif, serif;
+        text-align: right;
+        padding-top: 0.75em;
+        min-height: 2.1em;
+        position: relative;
+        top: -0.8em;
+        
+        ul {
+            
+            list-style: none;
+            text-align: right;
+            padding-left: 0;
+            
+            li {
+                
+                display: inline-block;
+                padding: 0 0 0 1.5em;
+                
+                a {
+                    color: $offwhite;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    padding: 0 !important;
+                    max-width: 100% !important;
+                    
+                    &:hover {
+                        color: $green;
+                    }
+                }
+            }
+        }
+    }
+    
+    .phone {
+        
+        h3 {
+            font-size: 1.25em;
+            font-style:italic;
+            margin: 0;
+            line-height: 2em;
+        }
+        
+    }
+
+    .search {
+
+        float: right;
+
+        label {
+            display: none;
+        }
+
+        input {
+            width: 100%;
+            background: transparent;
+            margin: 0;
+            border-radius: 2px;
+            border: #f9f9f9 2px solid;
+            padding: 0.52em;
+            font-size: 1em;
+            color: $offwhite;
+            font-family: PTSerif, serif;
+            @include box-sizing(border-box);
+        }
+
+        a {
+            text-align: right;
+            float: right;
+        }
+    }
+}
+
+.footer {
+
+    height: 100%;
+    background: $drkgrey;
+    color: $offwhite;
+    padding: 0.25em 0;
+
+    .span3 {
+        @extend .footer;
+        display: inline-block !important;
+        vertical-align: middle;
+    }
+
+    .footer-logo {
+
+        top: 0.2em;
+        position: relative;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .footer-contact {
+
+        top: 0.95em;
+        position: relative;
+
+        p {
+            font-size: 0.8em;
+            margin: 0;
+            letter-spacing: 0.168px;
+
+            .left {
+                float: left;
+                font-size: 1.15em;
+                letter-spacing: 0;
+            }
+
+            .right {
+                float: right;
+                font-size: 1.15em;
+                letter-spacing: 0;
+            }
+        }
+    }
+
+    .footer-social {
+
+        a {
+
+            .fm_linkedin {
+
+                span {
+                    background: url('http://impactgit.wpengine.com/parlan/assets/linkedin-icon.png') !important;
+                }
+            }
+
+        }
+        ul {
+
+            list-style: none;
+
+            li {
+                display: inline-block;
+                width: 15%;
+
+                img {
+                    max-width: 100%;
+                }
+
+                a:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    .footer-subscribe {
+
+        ul {
+            display: none;
+        }
+
+        line-height: 68px;
+
+        h3 {
+            display: none;
+        }
+
+        label {
+            display: none;
+        }
+
+        .input {
+            width: 100%;
+            display: inline-block;
+        }
+
+        .hs_email {
+
+            width: 75%;
+            display: inline-block;
+
+        }
+
+        .hs_submit {
+            width: 24%;
+            display: inline-block;
+        }
+
+        .hs-input {
+            width: 100%;
+            background: transparent;
+            border: $offwhite 2px solid;
+            border-radius: 2px 0 0 2px;
+            color: $offwhite;
+            padding: 0.95em 0.5em;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .hs-button{
+            display: inline-block;
+            border: none;
+            color: $green;
+            text-align: center;
+            background: $offwhite;
+            padding: 0.95em 0.5em;
+            border-radius: 0 2px 2px 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            border: $offwhite 2px solid;
+
+            &:hover {
+                cursor:pointer;
+            }
+
+        }
+
+    }
+}

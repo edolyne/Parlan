@@ -1,9 +1,15 @@
 @import "fonts";
 @import "colors";
 @import "buttons";
+@import "hubspot-visual";
+@import "subpages";
+
+.clear {
+    clear: both;
+}
 
 body {
-    background: #f9f9f9;
+    background: white;
     color: $drkgrey;
     margin: 0 auto;
 }
@@ -11,7 +17,7 @@ body {
 header {
     background: $drkgrey;
     color: $offwhite;
-    padding: 2em 0 1em;
+    /*padding: 2em 0 1em;*/
     
     .menu {
         font-family: PTSerif, serif;
@@ -38,8 +44,7 @@ header {
                     max-width: 100% !important;
                     
                     &:hover {
-                        padding-bottom: 0.15em;
-                        border-bottom: $offwhite 2px solid;
+                        color: $green;
                     }
                 }
             }
@@ -58,6 +63,8 @@ header {
     }
 
     .search {
+
+        float: right !important;
 
         label {
             display: none;
@@ -85,9 +92,12 @@ header {
 
 .client-login {
     font-size: 1em;
+    width: 100%;
     
     a {
         text-decoration: none;
+        float: left;
+        width: 100%;
     }
 }
 
@@ -96,7 +106,7 @@ ul {
 }
 
 .container-fluid {
-    max-width: 1080px;
+    /*max-width: 1080px;*/
     margin: 0 auto;
 }
 
@@ -414,6 +424,7 @@ ul {
     .footer-social {
         ul {
 
+            padding-left: 0;
             list-style: none;
 
             li {
@@ -497,9 +508,11 @@ ul {
 .sub-footer {
     background: $black;
     color: $greyblack;
+    font-size: 0.75em;
     
     p {
-        padding-top: 0.5em;
+        padding: 0.5em 0;
+        margin: 0;
     }
     
     a {
