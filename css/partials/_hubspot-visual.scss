@@ -3,18 +3,27 @@
     .row-fluid-wrapper {
         max-width: 1080px;
         margin: 0 auto;
+        padding: 0 20px;
     }
 }
 
 .bodyWrapper {
     max-width: 1080px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .header-container-wrapper {
     background: $drkgrey;
     color: $offwhite;
     padding: 2em 0 1em;
+
+   &.stuck {
+        width: 100%;
+        position: fixed;
+        top: 0 !important;
+        z-index: 9999;
+    }
     
     .menu {
         font-family: PTSerif, serif;
@@ -34,6 +43,7 @@
                 
                 display: inline-block;
                 padding: 0 0 0 1.5em;
+                @include box-sizing(border-box);
                 
                 a {
                     color: $offwhite;

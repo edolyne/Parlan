@@ -1,3 +1,11 @@
+/* iPhone Phone Link Style */
+
+a[href^=tel] { 
+	color: $offwhite;
+	text-decoration: none;
+}
+
+
 /* Large desktop */
 @media (min-width: 1200px) { 
 
@@ -8,25 +16,309 @@
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) { 
 
-	
+	body {
+		font-size: 0.95em;
+	}
+
+	header {
+
+		.phone {
+
+			vertical-align: middle;
+
+			h3 {
+				font-size: 0.9em !important;
+			}
+		}
+
+		.menu {
+
+			margin-top: 1.5em;
+		}
+	}
+
+	.value-prop {
+
+		h1 {
+			font-size: 1.9em;
+		}
+
+		h3 {
+			font-size: 1.4em;
+		}
+
+		p {
+			font-size: 0.85em;
+		}
+
+		.arrow {
+
+			img {
+				margin-left: 0em;
+			}
+
+		}
+	}
+
+	.banner-cta {
+		font-size: 0.8em;
+	}
+
+	.sticky-wrapper {
+
+		.stuck {
+			position: static;
+			max-width: 100%;
+		}
+
+	}
+
+	.buyerpersona-blog {
+		font-size: 0.9em;
+	}
+
+	.footer {
+
+		.footer-logo {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.footer-contact {
+			text-align: center;
+			display: inline-block;
+			vertical-align: middle;
+
+			.left, .right {
+				float: none !important;
+				display: block;
+				width: 100%;
+			}
+		}
+
+		.footer-social {
+
+			display: inline-block;
+			vertical-align: middle;
+
+			ul {
+
+				text-align: center;
+
+				li {
+					width: 25%;
+				}
+
+			}
+		}
+
+		.footer-subscribe {
+
+			display: inline-block;
+			vertical-align: middle;
+
+			.hs_email {
+				width: 60%;
+			}
+
+		}
+
+	}
 
 }
  
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
+    
+    .sticky-wrapper {
+        height: auto !important;
+    }
 
 	body {
 
-		padding-left: 0px;
-		padding-right: 0px;
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+		font-size: 0.9em;
+
+	}
+
+	.widget-type-space {
+		display: none !important;
+		width: 100% !important;
+	}
+
+	.header-container-wrapper {
+
+		&.stuck {
+			position: static !important;
+		}
+	}
+
+	header {
+
+		.span2.widget-span.widget-type-space  {
+			width: 100% !important;
+		}
+
+		.span2, .phone {
+			display: inline-block !important;
+			width: 49.5% !important;
+			vertical-align: middle;
+		}
+
+		.hidden-tablet {
+			display: none !important;
+		}
+
+		.menu {
+			text-align: center !important;
+			margin-top: 2em;
+		}
+        
+        #menu-toggle {
+			width:100%;
+			display: block;
+			font-size:1.35em;
+			text-align: right;
+            margin: 1.25em 0 0.5em 0;
+		}
+		.menu.js {
+			display: none;
+		}
+		ul {
+			width:100%;
+		}
+		li {
+			width:100%;
+			border-right:none;
+		}
+
+	}
+
+	.hidden-tablet {
+		display: none !important;
+	}
+
+	.value-prop {
+
+		p {
+			margin-left: 0;
+			margin-bottom: 1em;
+		}
+
+		.arrow {
+			display: none;
+		}
+
+	}
+
+	.buyerpersona-blog {
+		text-align: center;
+
+		img {
+			margin: 0.5em 0;
+		}
+
+		h4, ul, a {
+
+			text-align: left;
 
 		}
+
+	}
+
+	.text-link {
+		text-align: center;
+	}
+
+	.sidebar-cta {
+
+		.stuck {
+			position: static;
+		}
+
+	}
 
 }
  
 /* Landscape phones and down */
 @media (max-width: 480px) { 
 
+	header {
+
+		.phone {
+			font-size: 0.9em;
+
+			.span2 {
+				width: 100% !important;
+			}
+		}
+
+	}
+
+	.hidden-tablet {
+		display: none !important;
+	}
+
+	.value-prop {
+
+		p {
+			margin-left: 0;
+			margin-bottom: 1em;
+		}
+
+		.arrow {
+			display: none;
+		}
+
+	}
+
+	.buyerpersona-blog {
+		text-align: center;
+
+		img {
+			margin: 0.5em 0;
+		}
+
+		h4, ul, a {
+
+			text-align: left;
+
+		}
+
+	}
+
+	.text-link {
+		text-align: center;
+	}
+
+	.sidebar-cta {
+		&.bof-cta {
+			&.narrow {
+				&.stuck {
+				    position: static;
+					max-width: 100%;
+				}
+			}
+		}
+	}
+
+	/* Blog */
+
+		a.more-link {
+			width: 100%;
+			margin: 1.5em 0;
+		}
+
+	.footer {
+
+		.span3 {
+			width: 100% !important;
+			text-align: center;
+			@include box-sizing(border-box);
+		}
+
+	}
 	
 
 }

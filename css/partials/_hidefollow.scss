@@ -1,0 +1,69 @@
+/*
+  HIDEFOLLOW CSS
+*/
+
+.hidefollow-wrap {
+  text-align: left;
+  position: relative;
+  display: block;
+  width: auto !important;
+}
+
+.hidefollow-wrap .hidefollow-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  .shown {
+    display: inline-block !important;
+    vertical-align: middle;
+  }
+  
+}
+
+.hidefollow-wrap li {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  margin: 0px 5px 0;
+}
+
+.hidefollow-wrap span {
+  display: none;
+}
+
+a.follow {
+    text-decoration: none;
+    color: $green;
+    text-transform: capitalize;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+.follow {
+  
+  display: inline-block;
+  vertical-align: middle;
+
+  &:hover {
+
+  }
+}
+
+.hidefollow-list a {
+  color: $drkgrey;
+}
+.hidefollow-list a:hover {
+  color: $green;
+}
+
+.hidefollow-btn {
+  @extends .blue-btn;
+}

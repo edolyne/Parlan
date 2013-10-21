@@ -1,11 +1,20 @@
-@import "fonts";
 @import "colors";
 @import "buttons";
+@import "fonts";
 @import "hubspot-visual";
 @import "subpages";
+@import "hidefollow";
+@import "text-cta";
+@import "landing-pages";
+@import "dropdown-styling";
+
 
 .clear {
     clear: both;
+}
+
+img {
+    max-width: 100% !important;
 }
 
 body {
@@ -19,6 +28,17 @@ header {
     color: $offwhite;
     /*padding: 2em 0 1em;*/
     
+    .row-fluid {
+        
+        .span12 {
+            margin-left: 0;
+        }
+    }
+    
+    #menu-toggle {
+        display: none;
+    }
+    
     .menu {
         font-family: PTSerif, serif;
         text-align: right;
@@ -30,6 +50,7 @@ header {
             list-style: none;
             text-align: right;
             padding-left: 0;
+            z-index: 999;
             
             li {
                 
@@ -47,6 +68,23 @@ header {
                         color: $green;
                     }
                 }
+
+                ul {
+                    background: $drkgrey;
+                    text-align: left;
+                    margin-top: 2em;
+                    padding-bottom: 0.5em;
+
+                    li {
+                        text-align: left;
+                        width: 100%;
+                        padding: 0 1.5em !important;
+
+                        a {
+                            width: 240px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -58,6 +96,7 @@ header {
             font-style:italic;
             margin: 0;
             line-height: 2em;
+            color: $offwhite;
         }
         
     }
@@ -86,6 +125,11 @@ header {
         a {
             text-align: right;
             float: right;
+            color: $offwhite;
+
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 }
@@ -98,6 +142,7 @@ header {
         text-decoration: none;
         float: left;
         width: 100%;
+        @include box-sizing(border-box);
     }
 }
 
@@ -125,17 +170,23 @@ ul {
     }
     
     p {
-        margin-left: 5em;
-        margin-right: 3em;
+        margin-left: 1em;
+        width: 87%;
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 0;
+        
+    }
+    .arrow {
+        display: inline-block;
+        vertical-align: middle;
 
-        &:after {
-            content: url(../assets/value-prop-arrow.png);
-            display: inline-block;
-            float: right;
-            top: -0.625em;
-            position: relative;
+        img {
+            max-height: 30px;
+            margin-left: 0.75em;
         }
     }
+
 }
 
 .wistia_embed {
@@ -148,27 +199,39 @@ ul {
     padding: 3em 0;
     background: url(assets/get-aquainted-bg.jpg) no-repeat;
     background-size: cover;
+    text-align: center;
 
-    h2 {
-        color: $green;
-        border-bottom: $green 2px solid;
-        padding-bottom: 0.35em;
-        margin-top: 0;
-    }
+    .header {
 
-    h5 {
-        margin: 1em 2em;
-    }
+        margin-bottom: 2em;
 
-    a {
-        @include grn-solid-btn;
-        width: 80%;
-        font-size: 1.5em;
+        h2 {
+            color: $green;
+            border-bottom: $green 2px solid;
+            padding-bottom: 0.35em;
+            margin-top: 0;
+        }
 
-        &:hover {
-            @include grn-solid-btn-hover;
+        h6 {
+            margin: 0 !important;
         }
     }
+
+    .grn-solid-btn {
+
+
+        margin: 0 auto;
+        text-align: center;
+
+        a {
+
+            font-size: 1.15em;
+            color: $offwhite;
+            text-decoration: none;
+
+        }
+    }
+
 }
 
 .buyerpersona-blog {
@@ -179,40 +242,31 @@ ul {
     a {
         color: $offwhite;
     }
-    
-    .media {
-
-        padding-bottom: 1em;
         
-        .pull-left {
-            max-width: 18%;
-            margin: 0 1em 1em 0;
-            float: left;
+    img {
+        max-width: 100%;
+    }
 
-            img {
-                max-width: 100%;
-            }
-        }
+    h3 {
+        font-size: 1.25em;
+        min-height: 84px;
+        margin-top: 0;
+        color: $offwhite;
+    }
 
-        h3 {
-            font-size: 1.3em;
-            min-height: 84px;
-        }
+    h4 {
+        font-size: 1.15em;
+    }
 
-        h4 {
-            font-size: 1.15em;
-        }
+    ul {
+        padding-left: 0;
+    }
 
-        ul {
-            padding-left: 0;
-        }
+    a {
+        text-decoration: none;
 
-        a {
-            text-decoration: none;
-
-            &:hover {
-                text-decoraton: underline;
-            }
+        &:hover {
+            text-decoraton: underline;
         }
     }
 
@@ -247,6 +301,7 @@ ul {
         padding-bottom: 0.5em;
         margin-bottom: 1.5em;
         margin-top: 0;
+        text-align: center;
     }
 
     img {
@@ -255,6 +310,7 @@ ul {
 
     h4 {
         margin-top: 0;
+        color: $blue;
     }
 
     p {
@@ -278,8 +334,20 @@ ul {
     background-size: cover;
     color: $offwhite;
 
-    h5 {
-        font-size: 1.15em;
+    .header {
+
+        text-align: center;
+        margin-bottom: 3em;
+
+        h2 {
+            color: $offwhite;
+        }
+
+        h5 {
+            font-size: 1.15em;
+            text-align: center;
+        }
+
     }
 
     .trading-tweets {
@@ -335,8 +403,8 @@ ul {
 
     padding: 4em 0;
 
-    .span3 {
-        text-align: right;
+    .left {
+        text-align: left;
     }
 
     img {
@@ -362,15 +430,18 @@ ul {
     background-size: cover;
     color: $offwhite;
     padding: 6em 0;
+    text-align: center;
     
     h2 {
         margin: 0;
         font-size: 4em;
+        color: $offwhite;
     }
     
     h4 {
         margin: 0;
         font-size: 1.5em;
+        color: $offwhite;
     }
 }
 
@@ -385,6 +456,7 @@ ul {
         @extend .footer;
         display: inline-block !important;
         vertical-align: middle;
+        color: $offwhite;
     }
 
     .footer-logo {
@@ -406,17 +478,20 @@ ul {
             font-size: 0.8em;
             margin: 0;
             letter-spacing: 0.168px;
+            color: $offwhite !important;
 
             .left {
                 float: left;
                 font-size: 1.15em;
                 letter-spacing: 0;
+                color: $offwhite;
             }
 
             .right {
                 float: right;
                 font-size: 1.15em;
                 letter-spacing: 0;
+                color: $offwhite;
             }
         }
     }
@@ -429,14 +504,19 @@ ul {
 
             li {
                 display: inline-block;
+                vertical-align: middle;
                 width: 15%;
 
-                img {
-                    max-width: 100%;
-                }
+                a {
+                    text-decoration: none;
+                    
+                    i {
+                        color: $offwhite;
+                    }
 
-                a:hover {
-                    opacity: 0.8;
+                    &:hover {
+                        color: #fcfcfc;
+                    }
                 }
             }
         }
@@ -494,7 +574,9 @@ ul {
             border-radius: 0 2px 2px 0;
             margin-top: 0;
             margin-bottom: 0;
-            border: $offwhite 2px solid;
+            border: $offwhite 2px solid;  
+            -webkit-border-radius: 0px;  
+            -webkit-appearance: none;  
 
             &:hover {
                 cursor:pointer;
@@ -513,6 +595,7 @@ ul {
     p {
         padding: 0.5em 0;
         margin: 0;
+        color: $greyblack !important;
     }
     
     a {
@@ -526,6 +609,21 @@ ul {
     }
 }
 
+/* Sidebar */
+
+.sidebar-menu {
+    
+    ul {
+
+        li {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+    }
+}
+
 
 /* Offset Override */
 
@@ -535,6 +633,16 @@ ul {
 
 .offset1 {
     margin-left: 8.547008547008547% !important;
+}
+
+/* Hubspot Override */
+
+.hs-menu-wrapper.hs-menu-flow-horizontal>ul li.hs-item-has-children ul.hs-menu-children-wrapper {
+    z-index: 999 !important;
+}
+
+.hs-menu-wrapper.hs-menu-flow-horizontal>ul li.hs-item-has-children ul.hs-menu-children-wrapper li a {
+    width: 100% !important;
 }
 
 /* IMPACT Custom Responsive Style */
