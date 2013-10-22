@@ -13,21 +13,15 @@
 
 .sidebar-cta {
 
-	&.bof-cta {
-
-		&.narrow {
-
 			&.stuck {
 
 				position: fixed;
 				top: 30%;
-				max-width: 13.6%;
 				@include transition-duration(0.5s);
 				@include transition-timing-function(ease-in-out);
+                display: block;
 
 			}
-		}
-	}
 }
 
 /*.sidebar-cta {
@@ -188,6 +182,26 @@
 }
 
 
+/* Who We Serve */
+
+.insight-icons {
+    
+    display: inline-block;
+    vertical-align: middle;
+    
+    img {
+        max-width: 80% !important;
+        display: block;
+        vertical-align: middle;
+        margin: 0 auto;
+    }
+    
+    .widget-span {
+        display: inline-block !important;
+        vertical-align: middle;
+    }
+}
+
 /* Blog */
 
 .post-header {
@@ -234,6 +248,18 @@ a.topic-link {
         padding: 0.5em;
         border-bottom: #287114 5px solid;
         margin-bottom: 1em;
+    }
+    
+    .sticky-wrapper {
+        
+        .sticky-wrapper {   
+            position: absolute;
+            width: 18%;
+            
+            .span12 {
+                width: auto;
+            }
+        }
     }
 }
 
@@ -288,6 +314,14 @@ a.topic-link {
 			}
 		}
 	}
+}
+
+.blog-section {
+    
+    img {
+        
+        padding: 1em;
+    }
 }
 
 /* Pricing */

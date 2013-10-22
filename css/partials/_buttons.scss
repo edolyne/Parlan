@@ -80,6 +80,15 @@
     &:hover {
         @include btn-hover;
     }
+    
+    a {
+        color: $offwhite;
+        text-decoration: none;
+        
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 /* Blue Outlined Button */

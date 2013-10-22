@@ -155,68 +155,101 @@ a[href^=tel] {
 	}
 
 	header {
-
-		.span2.widget-span.widget-type-space  {
-			width: 100% !important;
-		}
-
-		.span2, .phone {
-			display: inline-block !important;
-			width: 49.5% !important;
-			vertical-align: middle;
-		}
-
-		.hidden-tablet {
-			display: none !important;
-		}
-
-		.menu {
-			text-align: center !important;
-			margin-top: 2em;
-		}
         
-        #menu-toggle {
-			width:100%;
-			display: block;
-			font-size:1.35em;
-			text-align: right;
-            margin: 1.25em 0 0.5em 0;
-		}
-		.menu.js {
-			display: none;
-		}
-		ul {
-			width:100%;
-		}
-		li {
-			width:100%;
-			border-right:none;
-		}
-
-	}
-
+        .widget-type-logo {
+            width: 70% !important;
+            display: inline-block !important;
+            vertical-align: middle;
+        }
+        
+        .client-login {
+            width: 28% !important;
+            display: inline-block !important;
+            vertical-align: middle;
+            @include box-sizing(border-box);
+            
+            .cell-wrapper {
+                margin-left: 1em;
+            }
+        }
+        
+        .widget-type-space {
+            display: none !important;
+        }
+        
+        .row-number-2 {
+            margin-top: 1em !important;
+            
+            .phone {
+                display: inline-block;
+                vertical-align: middle;
+                width: 50% !important;
+                text-align: left;
+    
+                .span2 {
+                    width: 100% !important;
+                }
+            }
+            
+            #menu-toggle {
+                display: inline-block;
+                vertical-align: middle;
+                width: 48%;
+                text-align: right;
+                margin: 0;
+                font-size:1.35em;
+            }
+            
+            .mobile-menu.js {
+                display: none;
+                
+                a {
+                    color: $offwhite;
+                    text-align: center;
+                    display: block;
+                    width: 100%;
+                    font-size: 1.25em;
+                }
+            }
+        }
+    }
+    
 	.hidden-tablet {
 		display: none !important;
 	}
 
-	.value-prop {
-
-		p {
-			margin-left: 0;
-			margin-bottom: 1em;
-		}
-
-		.arrow {
-			display: none;
-		}
-
-	}
+	.mobile-value {
+        padding: 2em 0;
+        background: url(assets/get-aquainted-bg.jpg) no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+        
+        h1 {
+            font-size: 1.7em;
+            margin-bottom: 0.25em;
+        }
+        
+        h2 {
+            font-size: 1.3em;
+        }
+        
+        h3 {
+            color: $green;
+            font-size: 1.15em;
+        }
+        
+        .grn-solid-btn {
+            text-align: center;
+            font-size: 1em;
+            margin-top: 0.5em;
+        }
+    }
 
 	.buyerpersona-blog {
 		text-align: center;
 
 		img {
-			margin: 0.5em 0;
+			margin: 0.5em 0 1em;
 		}
 
 		h4, ul, a {
@@ -224,8 +257,21 @@ a[href^=tel] {
 			text-align: left;
 
 		}
+        
+        a {
+            display: block;
+        }
 
 	}
+    
+    .home-ebook {
+        
+        img {
+            max-width: 30% !important;
+            margin: 0 auto 1em;
+            display: block;
+        }
+    }
 
 	.text-link {
 		text-align: center;
@@ -234,7 +280,7 @@ a[href^=tel] {
 	.sidebar-cta {
 
 		.stuck {
-			position: static;
+			position: static !important;
 		}
 
 	}
@@ -243,22 +289,102 @@ a[href^=tel] {
  
 /* Landscape phones and down */
 @media (max-width: 480px) { 
+    
+    .header-container-wrapper {
+        padding-top: 1em;
+    }
 
 	header {
-
-		.phone {
-			font-size: 0.9em;
-
-			.span2 {
-				width: 100% !important;
-			}
-		}
+        
+        .widget-type-logo {
+            width: 70% !important;
+            display: inline-block !important;
+            vertical-align: middle;
+        }
+        
+        .client-login {
+            width: 28% !important;
+            display: inline-block !important;
+            vertical-align: middle;
+            @include box-sizing(border-box);
+            
+            .cell-wrapper {
+                margin-left: 1em;
+            }
+        }
+        
+        .widget-type-space {
+            display: none !important;
+        }
+        
+        .row-number-2 {
+            margin-top: 1em !important;
+            
+            .phone {
+                display: inline-block;
+                vertical-align: middle;
+                width: 50% !important;
+                text-align: left;
+    
+                .span2 {
+                    width: 100% !important;
+                }
+            }
+            
+            #menu-toggle {
+                display: inline-block;
+                vertical-align: middle;
+                width: 48%;
+                text-align: right;
+                margin: 0;
+                font-size:1.35em;
+            }
+            
+            .mobile-menu.js {
+                display: none;
+                
+                a {
+                    color: $offwhite;
+                    text-align: center;
+                    display: block;
+                    width: 100%;
+                    font-size: 1.25em;
+                }
+            }
+        }
 
 	}
 
 	.hidden-tablet {
 		display: none !important;
 	}
+    
+    .mobile-value {
+        padding: 2em 0;
+        background: url(assets/get-aquainted-bg.jpg) no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+        
+        h1 {
+            font-size: 1.7em;
+            margin-bottom: 0.25em;
+        }
+        
+        h2 {
+            font-size: 1.3em;
+        }
+        
+        h3 {
+            color: $green;
+            font-size: 1.15em;
+        }
+        
+        .grn-solid-btn {
+            text-align: center;
+            font-size: 1em;
+            margin-top: 0.5em;
+        }
+    }
 
 	.value-prop {
 
@@ -277,7 +403,8 @@ a[href^=tel] {
 		text-align: center;
 
 		img {
-			margin: 0.5em 0;
+			margin: 0.5em 0 1.5em;
+            width: 40% !important;
 		}
 
 		h4, ul, a {
@@ -287,10 +414,95 @@ a[href^=tel] {
 		}
 
 	}
+    
+    .home-ebook {
+        
+        padding-bottom: 0;
+        
+        img {
+            max-width: 50% !important;
+            margin: 0 auto 1em auto;
+            display: block;
+        }
+    }
+    
+    .trading-news {
+        
+        .row-fluid-wrapper {
+            
+            .row-fluid-wrapper {
+                padding: 0;
+            }
+        }
+        
+        .hs-cta-wrapper {
+            
+            a {
+                font-size: 1em;
+            }
+        }
+    }
+    
+    .footer {
+        
+        .footer-contact {
+            margin-top: 1em;
+            top: 0;
+            position: static;
+            
+            p {
+                font-size: 1em;
+            }
+        }
+    }
 
 	.text-link {
 		text-align: center;
 	}
+    
+    /* Our Team */
+    
+    .our-team {
+        
+        .employee {
+            
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+            
+            .social-following {
+                text-align: center;
+            }
+            
+            .chat-now {
+                margin: 1em auto 0;
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+    
+    /* Resources */
+    
+    .resources-cta {
+        
+        @include box-sizing(border-box);
+        
+        .hs_cos_wrapper_type_cta {
+            width: 100%;
+            margin: 1em;
+            @include box-sizing(border-box);
+            
+        }
+    }
+    
+    /* Who We Serve */
+    
+    .insight-icons {
+        text-align: center;
+        padding: 2em 3em !important;
+    }
 
 	.sidebar-cta {
 		&.bof-cta {

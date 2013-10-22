@@ -37,6 +37,11 @@
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none; }
+  .grn-solid-btn a {
+    color: #f9f9f9;
+    text-decoration: none; }
+    .grn-solid-btn a:hover {
+      text-decoration: none; }
 
 /* Blue Outlined Button */
 .blue-btn-outline {
@@ -365,22 +370,30 @@ p {
       .footer .footer-subscribe .hs-button:hover {
         cursor: pointer; }
 
+/* Fixing Hubspot CRAP */
+.hs-menu-wrapper.hs-menu-flow-vertical.no-flyouts .hs-menu-children-wrapper {
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: static !important;
+  left: 0px;
+  padding-left: 3em; }
+
 .content {
   margin: 2.5em 0 4em; }
   .content .page-title h1 {
     padding-bottom: 0.15em;
     border-bottom: #263a58 2px solid; }
 
-.sidebar-cta.bof-cta.narrow.stuck {
+.sidebar-cta.stuck {
   position: fixed;
   top: 30%;
-  max-width: 13.6%;
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
   transition-duration: 0.5s;
   -webkit-transition-timing-function: ease-in-out;
   -moz-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out; }
+  transition-timing-function: ease-in-out;
+  display: block; }
 
 /*.sidebar-cta {
 	max-width: 100%;
@@ -482,6 +495,19 @@ p {
       .resources-cta .hs_cos_wrapper_type_cta img:hover {
         opacity: 0.95; }
 
+/* Who We Serve */
+.insight-icons {
+  display: inline-block;
+  vertical-align: middle; }
+  .insight-icons img {
+    max-width: 80% !important;
+    display: block;
+    vertical-align: middle;
+    margin: 0 auto; }
+  .insight-icons .widget-span {
+    display: inline-block !important;
+    vertical-align: middle; }
+
 /* Blog */
 .post-header a {
   text-decoration: none; }
@@ -539,6 +565,11 @@ a.topic-link {
   padding: 0.5em;
   border-bottom: #287114 5px solid;
   margin-bottom: 1em; }
+.sidebar .sticky-wrapper .sticky-wrapper {
+  position: absolute;
+  width: 18%; }
+  .sidebar .sticky-wrapper .sticky-wrapper .span12 {
+    width: auto; }
 
 .blog-email-subscribe {
   margin: 2em 0 1em; }
@@ -589,6 +620,9 @@ a.topic-link {
       padding: 0.5em 0; }
       .blog-recent-posts ul li a {
         text-decoration: none; }
+
+.blog-section img {
+  padding: 1em; }
 
 /* Pricing */
 .pricing-table {
@@ -1381,61 +1415,151 @@ a[href^=tel] {
   .header-container-wrapper.stuck {
     position: static !important; }
 
-  header .span2.widget-span.widget-type-space {
-    width: 100% !important; }
-  header .span2, header .phone {
+  header .widget-type-logo {
+    width: 70% !important;
     display: inline-block !important;
-    width: 49.5% !important;
     vertical-align: middle; }
-  header .hidden-tablet {
+  header .client-login {
+    width: 28% !important;
+    display: inline-block !important;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    header .client-login .cell-wrapper {
+      margin-left: 1em; }
+  header .widget-type-space {
     display: none !important; }
-  header .menu {
-    text-align: center !important;
-    margin-top: 2em; }
-  header #menu-toggle {
-    width: 100%;
-    display: block;
-    font-size: 1.35em;
-    text-align: right;
-    margin: 1.25em 0 0.5em 0; }
-  header .menu.js {
-    display: none; }
-  header ul {
-    width: 100%; }
-  header li {
-    width: 100%;
-    border-right: none; }
+  header .row-number-2 {
+    margin-top: 1em !important; }
+    header .row-number-2 .phone {
+      display: inline-block;
+      vertical-align: middle;
+      width: 50% !important;
+      text-align: left; }
+      header .row-number-2 .phone .span2 {
+        width: 100% !important; }
+    header .row-number-2 #menu-toggle {
+      display: inline-block;
+      vertical-align: middle;
+      width: 48%;
+      text-align: right;
+      margin: 0;
+      font-size: 1.35em; }
+    header .row-number-2 .mobile-menu.js {
+      display: none; }
+      header .row-number-2 .mobile-menu.js a {
+        color: #f9f9f9;
+        text-align: center;
+        display: block;
+        width: 100%;
+        font-size: 1.25em; }
 
   .hidden-tablet {
     display: none !important; }
 
-  .value-prop p {
-    margin-left: 0;
-    margin-bottom: 1em; }
-  .value-prop .arrow {
-    display: none; }
+  .mobile-value {
+    padding: 2em 0;
+    background: url(../assets/get-aquainted-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: bottom center; }
+    .mobile-value h1 {
+      font-size: 1.7em;
+      margin-bottom: 0.25em; }
+    .mobile-value h2 {
+      font-size: 1.3em; }
+    .mobile-value h3 {
+      color: #287114;
+      font-size: 1.15em; }
+    .mobile-value .grn-solid-btn {
+      text-align: center;
+      font-size: 1em;
+      margin-top: 0.5em; }
 
   .buyerpersona-blog {
     text-align: center; }
     .buyerpersona-blog img {
-      margin: 0.5em 0; }
+      margin: 0.5em 0 1em; }
     .buyerpersona-blog h4, .buyerpersona-blog ul, .buyerpersona-blog a {
       text-align: left; }
+    .buyerpersona-blog a {
+      display: block; }
+
+  .home-ebook img {
+    max-width: 30% !important;
+    margin: 0 auto 1em;
+    display: block; }
 
   .text-link {
     text-align: center; }
 
   .sidebar-cta .stuck {
-    position: static; } }
+    position: static !important; } }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  header .phone {
-    font-size: 0.9em; }
-    header .phone .span2 {
-      width: 100% !important; }
+  .header-container-wrapper {
+    padding-top: 1em; }
+
+  header .widget-type-logo {
+    width: 70% !important;
+    display: inline-block !important;
+    vertical-align: middle; }
+  header .client-login {
+    width: 28% !important;
+    display: inline-block !important;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    header .client-login .cell-wrapper {
+      margin-left: 1em; }
+  header .widget-type-space {
+    display: none !important; }
+  header .row-number-2 {
+    margin-top: 1em !important; }
+    header .row-number-2 .phone {
+      display: inline-block;
+      vertical-align: middle;
+      width: 50% !important;
+      text-align: left; }
+      header .row-number-2 .phone .span2 {
+        width: 100% !important; }
+    header .row-number-2 #menu-toggle {
+      display: inline-block;
+      vertical-align: middle;
+      width: 48%;
+      text-align: right;
+      margin: 0;
+      font-size: 1.35em; }
+    header .row-number-2 .mobile-menu.js {
+      display: none; }
+      header .row-number-2 .mobile-menu.js a {
+        color: #f9f9f9;
+        text-align: center;
+        display: block;
+        width: 100%;
+        font-size: 1.25em; }
 
   .hidden-tablet {
     display: none !important; }
+
+  .mobile-value {
+    padding: 2em 0;
+    background: url(../assets/get-aquainted-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: bottom center; }
+    .mobile-value h1 {
+      font-size: 1.7em;
+      margin-bottom: 0.25em; }
+    .mobile-value h2 {
+      font-size: 1.3em; }
+    .mobile-value h3 {
+      color: #287114;
+      font-size: 1.15em; }
+    .mobile-value .grn-solid-btn {
+      text-align: center;
+      font-size: 1em;
+      margin-top: 0.5em; }
 
   .value-prop p {
     margin-left: 0;
@@ -1446,12 +1570,60 @@ a[href^=tel] {
   .buyerpersona-blog {
     text-align: center; }
     .buyerpersona-blog img {
-      margin: 0.5em 0; }
+      margin: 0.5em 0 1.5em;
+      width: 40% !important; }
     .buyerpersona-blog h4, .buyerpersona-blog ul, .buyerpersona-blog a {
       text-align: left; }
 
+  .home-ebook {
+    padding-bottom: 0; }
+    .home-ebook img {
+      max-width: 50% !important;
+      margin: 0 auto 1em auto;
+      display: block; }
+
+  .trading-news .row-fluid-wrapper .row-fluid-wrapper {
+    padding: 0; }
+  .trading-news .hs-cta-wrapper a {
+    font-size: 1em; }
+
+  .footer .footer-contact {
+    margin-top: 1em;
+    top: 0;
+    position: static; }
+    .footer .footer-contact p {
+      font-size: 1em; }
+
   .text-link {
     text-align: center; }
+
+  /* Our Team */
+  .our-team .employee img {
+    display: block;
+    margin: 0 auto; }
+  .our-team .employee .social-following {
+    text-align: center; }
+  .our-team .employee .chat-now {
+    margin: 1em auto 0;
+    display: block;
+    text-align: center; }
+
+  /* Resources */
+  .resources-cta {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .resources-cta .hs_cos_wrapper_type_cta {
+      width: 100%;
+      margin: 1em;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+
+  /* Who We Serve */
+  .insight-icons {
+    text-align: center;
+    padding: 2em 3em !important; }
 
   .sidebar-cta.bof-cta.narrow.stuck {
     position: static;

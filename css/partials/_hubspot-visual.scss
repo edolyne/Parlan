@@ -243,3 +243,15 @@
 
     }
 }
+
+/* Fixing Hubspot CRAP */
+
+.hs-menu-wrapper.hs-menu-flow-vertical.no-flyouts .hs-menu-children-wrapper {
+    
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: static !important;
+    left: 0px;
+    padding-left: 3em;
+    
+}
