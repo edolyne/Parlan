@@ -5,47 +5,20 @@
 
 		h1 {
 			padding-bottom: 0.15em;
-			border-bottom: $blue 2px solid;
+			/*border-bottom: $blue 2px solid;*/
 		}
 
 	}
 }
 
-.sidebar-cta {
+#sidebar-cta {
 
-			&.stuck {
-
-				position: fixed;
-				top: 30%;
-				@include transition-duration(0.5s);
-				@include transition-timing-function(ease-in-out);
-                display: block;
-
-			}
+    width: 15em;
+    
+    h2 {
+        font-size: 2em;
+    }
 }
-
-/*.sidebar-cta {
-	max-width: 100%;
-
-	&.stuck {
-		@extends .sidebar-cta;
-		position: fixed;
-		top: 1em;
-		transition: 0.5s;
-		max-width: 249px;
-
-		img {
-			max-width: 100%;
-			margin: 0 0 0 15%;
-		}
-	}
-
-	img {
-		max-width: 80%;
-		margin: 0 0 0 10%;
-	}
-}*/
-
 
 /* Our Team */
 
@@ -130,27 +103,6 @@
                 }
             }
         }
-
-		/*.bio {
-
-			max-height: 0em;
-			overflow: hidden;
-			opacity: 0;
-			-webkit-transition: 1s ease-in-out;
-			-moz-transition: 1s ease-in-out;
-			-o-transition: 1s ease-in-out;
-			-ms-transition: 1s ease-in-out;
-			transition: 1s ease-in-out;
-
-			&.show {
-
-				max-height: 9999em;
-				opacity: 1;
-
-			}
-
-		}*/
-
 	}
 }
 
@@ -184,6 +136,10 @@
 
 /* Who We Serve */
 
+.insight-links {
+    margin-top: 4em;
+}
+
 .insight-icons {
     
     display: inline-block;
@@ -194,11 +150,17 @@
         display: block;
         vertical-align: middle;
         margin: 0 auto;
+        max-height: 74px;
+        width: auto;
     }
     
     .widget-span {
         display: inline-block !important;
         vertical-align: middle;
+    }
+    
+    .text-link {
+        padding-left: 0;
     }
 }
 
@@ -363,5 +325,4 @@ a.topic-link {
 			}
 		}
 	}
-
 }

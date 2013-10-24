@@ -56,3 +56,44 @@ h6 {
 p {font-size: 1.12em;line-height: 1.5em;
     margin:0 0 22px 0;
     padding:0;}
+
+.content {
+
+    ul, li {
+        font-size: 1.05em;
+        line-height: 1.15em;
+    }
+    
+    li {
+        list-style-type: disc;
+        list-style-position: inside;
+        padding: 0.5em 0 0.5em 1.25em;
+        text-indent: -1em;
+    }
+    
+    .right-sidebar {
+        
+        ul {
+            
+            li {
+                list-style-none: disc;
+                padding-top: 0;
+                padding-bottom: 0;
+                
+                a {
+                    border-bottom: $green 1px solid;
+                }
+                
+                ul {
+                    
+                    li {
+                        list-style-type: disc;
+                        list-style-position: inside;
+                        color: $green;
+                    }
+                }
+                
+            }
+        }
+    }
+}

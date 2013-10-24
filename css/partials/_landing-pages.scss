@@ -4,6 +4,21 @@
 
 .hs-landing-page {
     
+    .header-container-wrapper {
+        padding-top: 1em;
+    }
+    
+    .landing-header {
+        
+        .widget-type-logo {
+           
+        }
+        
+        .phone {
+            
+        }
+    }
+    
     .bodyWrapper {
         
         margin-top: 3em;
@@ -12,9 +27,13 @@
     .landing-page-form {
         
         padding: 1em 2em;
-        border-left: $drkgrey 1px solid;
+        border-left: $green 5px solid;
         background: $offwhite;
-        border-radius: 0 4px 0 4px 0;
+        border-radius: 0 8px 8px 0;
+        
+        h3 {
+            color: $green;
+        }
     
         .hs-form-field {
             margin: 1em 0;
@@ -32,6 +51,15 @@
             
             select {
                 width: 100%;
+                background: url(assets/down_arrow.png) no-repeat right white;
+                background-size: 18%;
+                padding: 0.75em;
+                font-size: 1em;
+                font-family: PTSerif, serif;
+                line-height: 1em;
+                border: $green 1px solid;
+                border-radius: 2px;
+                -webkit-appearance: none;
             }
         }
         
@@ -51,5 +79,13 @@
                 }
             }
         }
+    }
+    
+    .landing-footer {
+        background: $drkgrey;
+        padding: 0.5em 0 0;
+        margin-top: 2em;
+        color: $greyblack;
+        text-align: center;
     }
 }

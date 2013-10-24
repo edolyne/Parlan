@@ -12,6 +12,29 @@ a[href^=tel] {
 	
 
 }
+
+/* Large desktop */
+@media (min-width: 1000px) and (max-width: 1080px) { 
+
+	#sidebar-cta {
+    
+        width: 13em;
+        @include transition-duration(0.75s);
+        
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+ 
+	#sidebar-cta {
+    
+        width: 11em;
+        @include transition-duration(0.5s);
+        
+    }
+    
+}
  
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) { 
@@ -129,6 +152,12 @@ a[href^=tel] {
  
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
+    
+    .header-container-wrapper, #sidebar-cta {
+        
+        position: static !important;
+        
+    }
     
     .sticky-wrapper {
         height: auto !important;
@@ -277,13 +306,12 @@ a[href^=tel] {
 		text-align: center;
 	}
 
-	.sidebar-cta {
-
-		.stuck {
-			position: static !important;
-		}
-
-	}
+	#sidebar-cta {
+    
+        width: 100%;
+        @include transition-duration(0.75s);
+        
+    }
 
 }
  
