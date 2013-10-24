@@ -229,16 +229,20 @@ p {
   list-style-position: inside;
   padding: 0.5em 0 0.5em 1.25em;
   text-indent: -1em; }
+.content .right-sidebar ul a {
+  color: #222222; }
 .content .right-sidebar ul li {
-  list-style-none: disc;
+  list-style: none;
   padding-top: 0;
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  padding-left: 0; }
   .content .right-sidebar ul li a {
-    border-bottom: #287114 1px solid; }
+    border-bottom: #d8d8d8 1px solid; }
   .content .right-sidebar ul li ul li {
     list-style-type: disc;
     list-style-position: inside;
-    color: #287114; }
+    color: #222222;
+    padding-left: 1em; }
 
 .fullWidth .row-fluid-wrapper {
   max-width: 1080px;

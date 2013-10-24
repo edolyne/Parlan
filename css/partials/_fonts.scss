@@ -75,13 +75,18 @@ p {font-size: 1.12em;line-height: 1.5em;
         
         ul {
             
+            a {
+                color: $drkgrey;
+            }
+            
             li {
-                list-style-none: disc;
+                list-style: none;
                 padding-top: 0;
                 padding-bottom: 0;
+                padding-left: 0;
                 
                 a {
-                    border-bottom: $green 1px solid;
+                    border-bottom: $ltgrey 1px solid;
                 }
                 
                 ul {
@@ -89,7 +94,8 @@ p {font-size: 1.12em;line-height: 1.5em;
                     li {
                         list-style-type: disc;
                         list-style-position: inside;
-                        color: $green;
+                        color: $drkgrey;
+                        padding-left: 1em;
                     }
                 }
                 
