@@ -1,0 +1,268 @@
+/* ***********************************************************************************************************************************	*/
+/* 																	*/
+/*   ©Bitbenderz.com ...2007 - 2011													*/
+/* 																	*/
+/*   @ author  : tom@bitbenderz.com													*/
+/*   @ version : 2.0.3															*/
+/*   @ updated : April 22, 2013														*/
+/*   @ licnese : Dual licensed under ... 												*/
+/* 		 MIT (http://www.opensource.org/licenses/mit-license.php)								*/
+/* 		 GPL (http://www.opensource.org/licenses/gpl-license.php)								*/
+/* 																	*/
+/*  ******************************************************** NOTE ********************************************************************	*/
+/* 																	*/
+/* 					This file has beed saved with UTF-8 encoding!							*/
+/* 																	*/
+/*  **********************************************************************************************************************************	*/
+
+:focus{outline:none;}
+
+h1.hr {display:block; height:1px; width:100%; margin: 8px 0px 8px 0px; border-bottom:1px #999 solid; border-top:0px; border-left:0px; border-right:0px;}
+
+#scrollingMask
+{
+	width:100%;
+	height:20px;
+	position:relative;
+	padding:0px 0px 0px 0px;
+	text-align:left;
+	overflow:hidden;
+	cursor:default;
+	line-height:20px;
+}
+
+div.scrollWrapper
+{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+div.scrollableArea
+{
+	position: relative;
+	width: auto;
+	height: 100%;
+}
+
+div.scrollingText
+{
+	line-height:20px;
+	height: 20px;
+	left: 0px;
+	position: relative;
+	padding:0px 0px 0px 0px;
+	text-align:left;
+}
+
+span.tickerSymbol
+{
+	margin: 0px 4px 0px 0px;
+	zcolor:#000000;
+	font-size: 13px;
+	font-weight: normal;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	cursor: pointer;
+}
+
+span.tickerSymbol:before {content: "●"; margin:0px 4px 0px 0px;}
+
+span.tickerSymbol span{margin: 0px 4px 0px 4px;}
+span.tickerSymbol span.tickerPrice{font-weight:bold;}
+span.tickerSymbol span.tickerChange.down
+{
+	color: #D60000;
+	font-weight:bold;
+	padding: 0px 0px 0px 12px;
+	background: transparent url(assets/down.gif) left 2px no-repeat;
+}
+	
+span.tickerSymbol span.tickerChange.up
+{
+	color: #067700;
+	font-weight:bold;
+	padding: 0px 0px 0px 12px;
+	background: transparent url(assets/up.gif) left 1px no-repeat;
+}
+
+span.tickerSymbol span.tickerChange.unch
+{
+	color: #000;
+	font-weight:bold;
+	padding: 0px 0px 0px 0px;
+	zbackground: transparent url(assets/unch.gif) left 3px no-repeat;
+}
+
+span.paren:before {content:"("; position:relative; top:-1px;}
+span.paren:after  {content:")"; position:relative; top:-1px;}
+
+
+/*  Override jQuery ui settings  */
+ul#icons {display: none !important; margin: 0 !important; padding: 0 !important; width:120px !important; position:absolute !important; left:1025px; top:0px; border:none;}
+ul#icons li {margin: 1px 1px 1px 1px !important; position: relative !important; padding: 0 0 !important; cursor: pointer !important; float: left !important;  list-style: none !important;}
+ul#icons span.ui-icon {float: left !important; margin: 0 0px !important;}
+
+/*  Override jQuery ui settings  */
+ul#loadcons {margin: 0 !important; padding: 0 !important; width:20px !important; position:absolute !important; left:-20px; top:0px; border:none;}
+ul#loadcons li {margin: 1px 1px 1px 1px !important; position: relative !important; padding: 0 0 !important; cursor: pointer !important; float: left !important;  list-style: none !important;}
+ul#loadcons span.ui-icon-loading {float: left !important; margin: 0 0px !important; background:transparent !important;}
+
+.ui-widget{font-size:16px !important;}	
+.ui-front{z-index: 999999 !important;}
+
+.ui-icon-about{background-image:url(assets/info_icon.png) !important; background-position: 0px 0px !important;}
+.ui-icon-apply{background-image:url(images/apply_icon.png) !important; background-position: 1px 1px !important;}
+
+/* Corner radius */
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl { -moz-border-radius-topleft: 4px !important; -webkit-border-top-left-radius: 4px !important; -khtml-border-top-left-radius: 4px !important; border-top-left-radius: 4px !important; }
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { -moz-border-radius-topright: 4px !important; -webkit-border-top-right-radius: 4px !important; -khtml-border-top-right-radius: 4px !important; border-top-right-radius: 4px !important; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl { -moz-border-radius-bottomleft: 4px !important; -webkit-border-bottom-left-radius: 4px !important; -khtml-border-bottom-left-radius: 4px !important; border-bottom-left-radius: 4px !important; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br { -moz-border-radius-bottomright: 4px !important; -webkit-border-bottom-right-radius: 4px !important; -khtml-border-bottom-right-radius: 4px !important; border-bottom-right-radius: 4px !important; }
+
+.ui-draggable .ui-dialog-titlebar { cursor: default !important; }
+
+.ui-widget-header-override{background-image:none !important;}
+
+.ui-button-text{line-height:16px !important; font-size:8pt !important;}
+
+.stockTickerOptions{display:none; overflow:hidden !important;}
+.stockTickerOptionsContent{overflow:visible;}
+.stockTickerOptions .ui-accordion .ui-accordion-content{padding:8px !important;}
+.stockTickerOptions .ui-accordion .ui-accordion-content button.help span{height:18px; width:18px;}
+
+button.tickerInfo{height:20px; width:21px; margin:-10px 0px 0px 0px; padding:1px; position:absolute; top:50%; right:27px;}
+button.tickerInfo span{height:16px; width:16px;}
+
+button.tickerHelp{height:20px; width:21px; margin:-10px 0px 0px 0px; padding:1px; position:absolute; top:50%; right:50px;}
+button.tickerHelp span{height:16px; width:16px;}
+
+button.tickerApply{height:20px; width:21px; margin:-10px 0px 0px 0px; padding:1px; position:absolute; top:50%; right:73px;}
+button.tickerApply span{height:16px; width:16px;}
+
+button.tickerReset{height:20px; width:21px; margin:-10px 0px 0px 0px; padding:1px; position:absolute; top:50%; right:96px;}
+button.tickerReset span{height:16px; width:16px;}
+
+
+div.stockTickerOptions, div.stockTickerOptions div, div.stockTickerOptions span, div.stockTickerOptions p, div.stockTickerOptions a, div.stockTickerOptions strong, div.stockTickerOptions ol, div.stockTickerOptions ul, div.stockTickerOptions li, div.stockTickerOptions form, div.stockTickerOptions label{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    background:none;
+    background-color:none;
+    text-transform:none;
+    color:#666;
+}
+
+
+div.stockTickerOptions #tabs-1, div.stockTickerOptions #tabs-2, div.stockTickerOptions #tabs-3, div.stockTickerOptions #tabs-4 
+{
+    font-size:13px !important; 
+    border:1px solid #AAAAAA; 
+    min-height:188px; 
+    max-height:188px; 
+    height:188px; 
+    overflow:hidden; 
+    position:relative; 
+    z-index:100; 
+    top:0px;
+}
+
+div.stockTickerOptions .ui-tabs-anchor{padding:2px 4px 2px 4px !important;}
+
+div.stockTickerOptionsContent>ul>li.ui-state-default{z-index:90;}
+div.stockTickerOptionsContent>ul>li.ui-state-active{z-index:101;}
+
+div.stockTickerOptionsContent>.ui-tabs-panel {
+    display: block;
+    border-width: 0;
+    padding: 8px 0px 8px 8px !important;
+    background: none;
+}
+
+div.stockTickerOptions .chkLbl {position:relative; left:3px; top: -2px;}
+
+div.stockTickerOptions #tabs-2 textarea.symbols
+{
+    color:#666;
+    text-transform:uppercase; 
+    height:138px; 
+    width:249px; 
+    border:1px solid #D3D3D3; 
+    resize:none; 
+    padding:4px;
+}
+
+div.stockTickerOptions select#convert-to
+{
+    width:260px;
+    border:1px solid #D3D3D3;
+    margin:0px 0px 10px 0px;
+    color: #666;
+}
+
+div.stockTickerOptions select#convert-to options{color:#666;}
+
+/*  YUI Quote Search  */
+div.quoteSymbolLookup, div.quoteSymbolLookup div, div.quoteSymbolLookup span, div.quoteSymbolLookup p, div.quoteSymbolLookup a, div.quoteSymbolLookup strong, div.quoteSymbolLookup form, div.quoteSymbolLookup label{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    background:none;
+    background-color:none;
+    text-transform:none;
+    color:#666;
+}
+
+#quoteContainer {position:absolute; text-align:left;}
+
+#quoteContainer ul#resQuotes.ui-menu
+{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border:none; 
+    width:260px; 
+    font-size:0.66em !important;
+}
+
+    #quoteContainer ul#resQuotes.ui-menu .ui-menu-item{width:238px !important;}
+
+    #quoteContainer ul#resQuotes.ui-menu em{font-style:normal !important;}
+    #quoteContainer ul#resQuotes div.symbol		{width:60px; display:inline-block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; margin:0px 0px 0px 4px; }
+    #quoteContainer ul#resQuotes div.name		{width:156px; display:inline-block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; margin:0px 0px 0px 4px; }
+    #quoteContainer ul#resQuotes div.exch_type_wrapper	{width:50px; display:none; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; margin:0px 0px 0px 4px; }
+    #txtQuotes{color:#666; font-size:13px; display:inline-block; width:228px; padding:2px 4px 2px 4px; margin:0px 0px 4px 0px; border:1px solid #D3D3D3; background-color:transparent; outline:none; text-transform:uppercase;}
+    button.add{height:22px !important; width:22px !important; position:relative; top:-2px; left:-1px; margin:0px; border-left:none;}
+    button.add span.ui-button-icon-primary{background-position:-16px -128px !important; }
+
+
+/*  Currency Convert ComboBox  */
+div.stockTickerOptions div.currencyConvertCombo{height:22px; margin:0px 0px 4px 0px;}
+div.stockTickerOptions div.currencyConvertCombo .custom-combobox{position: absolute; left: 0px; height: 20px; width: 268px; display: inline-block;}
+div.stockTickerOptions div.currencyConvertCombo .custom-combobox-toggle{position: absolute; top: 0; bottom: 0; margin-left: -1px; padding: 0;}
+div.stockTickerOptions div.currencyConvertCombo .custom-combobox-input{color:#666; font-size:13px !important; display:inline-block; float:left; width:228px; padding:2px 4px 2px 4px !important; margin:0px 0px 0px 8px !important; border:1px solid #D3D3D3 !important; background:transparent !important; outline:none;}
+div.stockTickerOptions div.currencyConvertCombo .custom-combobox .ui-button{height:20px !important; width:20px !important;}
+div.stockTickerOptions div.currencyConvertCombo .custom-combobox .ui-icon-triangle-1-s{background-position:-64px -16px !important;}
+.currency-autocomplete{text-align: left; position: relative !important; top:23px !important; color:#666 !important; font-size:13px !important; min-width: 268px !important; max-width: 268px !important; width: 268px !important; background-image:none !important; background:#FFF !important; overflow:visible !important; padding:0px 0px 0px 0px !important;}
+.currency-autocomplete .ui-menu-item{color:#666 !important; min-width: 224px !important; max-width: 224px !important; width: 224px !important; height:18px !important; line-height:18px !important; margin:2px 0px 2px 0px !important;}
+.currency-autocomplete .ui-menu-item a{color:#666 !important; min-width: 224px !important; max-width: 224px !important; width: 224px !important; height:16px !important; line-height:16px !important; background-image:none !important;}
+
+
+
+
+
+
+
+
+
+
+
+
+

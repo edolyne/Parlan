@@ -7,7 +7,7 @@
 @import "text-cta";
 @import "landing-pages";
 @import "dropdown-styling";
-
+@import "tables";
 
 .clear {
     clear: both;
@@ -159,11 +159,12 @@ header {
     .phone {
         
         h3 {
-            font-size: 1.25em;
+            font-size: 1em;
             font-style:italic;
             margin: 0;
             line-height: 2em;
             color: $offwhite;
+            text-align: right;
         }
         
     }
@@ -577,6 +578,9 @@ ul {
     }
 
     .footer-social {
+        
+        font-family: SSSocialRegular;
+        
         ul {
 
             padding-left: 0;
@@ -589,6 +593,7 @@ ul {
 
                 a {
                     text-decoration: none;
+                    color: $offwhite;
                     
                     i {
                         color: $offwhite;
@@ -621,7 +626,7 @@ ul {
 
         .hs_email {
 
-            width: 75%;
+            width: 73%;
             display: inline-block;
 
         }
@@ -672,10 +677,23 @@ ul {
     color: $greyblack;
     font-size: 0.75em;
     
+    .sub-footer-menu {
+        
+        a {
+            color: $green;
+            padding: 0.5em 2.5em 0 0 !important;
+            
+            &:hover {
+                color: $drkgreen;
+            }
+        }
+    }
+    
     p {
         padding: 0.5em 0;
         margin: 0;
         color: $greyblack !important;
+        text-align: right;
     }
     
     a {
@@ -729,6 +747,42 @@ ul {
 
 .hs-menu-wrapper.hs-menu-flow-horizontal>ul li.hs-item-has-children ul.hs-menu-children-wrapper li a {
     width: 100% !important;
+}
+
+/* Tweetable */
+
+
+.tweet-btn {
+    margin: 0.5em 0;
+}
+
+a.tweetable {
+    text-decoration: none;
+}
+
+/* Trade Disclaimer */
+
+p.trade-disclaimer {
+    text-align: right;
+    font-size: 0.75em;
+    margin-top: 2em;
+}
+
+/* Stock Ticker */
+
+.stockTicker {
+    margin: 2em 0 3em 0;
+}
+
+#scrollingMask {
+    background: none;
+    border: none;
+    
+    .tickerSymbol {
+        font-size: 0.85em;
+        color: $drkgrey;
+        font-family: PTSans, sans-serif;
+    }
 }
 
 /* IMPACT Custom Responsive Style */
