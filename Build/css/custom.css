@@ -43,6 +43,33 @@
     .grn-solid-btn a:hover {
       text-decoration: none; }
 
+/* Green Outlined Button */
+.green-btn-outline {
+  border-radius: 2px;
+  border: 2px solid #287114;
+  color: #287114;
+  font-family: PTSerif, serif;
+  display: block;
+  text-align: center;
+  padding: 0.5em;
+  font-size: 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 1.25em; }
+  .green-btn-outline a {
+    color: #287114;
+    text-decoration: none;
+    display: block; }
+    .green-btn-outline a:hover {
+      color: #f9f9f9;
+      text-decoration: none; }
+  .green-btn-outline:hover {
+    text-decoration: none;
+    background: #287114; }
+    .green-btn-outline:hover a {
+      color: #f9f9f9 !important; }
+
 /* Blue Outlined Button */
 .blue-btn-outline {
   border-radius: 2px;
@@ -257,7 +284,7 @@ p {
 .header-container-wrapper {
   background: #222222;
   color: #f9f9f9;
-  padding: 2em 0 1em; }
+  padding: 2em 0 0; }
   .header-container-wrapper.stuck {
     width: 100%;
     position: fixed;
@@ -281,7 +308,7 @@ p {
       padding-left: 0; }
       .header-container-wrapper .menu ul li {
         display: inline-block;
-        padding: 0.25em 1em;
+        padding: 0.25em 1em 0;
         border-radius: 4px 4px 0 0;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -426,6 +453,10 @@ p {
   #sidebar-cta h2 {
     font-size: 2em; }
 
+/* Our Process */
+.icon-links {
+  height: auto !important; }
+
 /* Our Team */
 .our-team .employee {
   margin: 2em 0 4em 0; }
@@ -461,6 +492,8 @@ p {
       padding: 0.25em; }
       .our-team .employee .social-following a i:hover {
         color: #287114; }
+  .our-team .employee .green-btn-outline {
+    margin-top: 1em; }
   .our-team .employee .chat-now {
     border-width: 0px;
     font-size: 1.25em;
@@ -645,6 +678,26 @@ a.topic-link {
       margin-top: 3em; }
       .pricing-table .lower .pricingButton a:hover {
         text-decoration: none; }
+
+/* Modals */
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: none; }
+
+.modal {
+  display: none;
+  background: #eee;
+  padding: 0 20px 20px;
+  overflow: auto;
+  z-index: 1001;
+  position: absolute;
+  width: 500px;
+  min-height: 300px; }
 
 /*
   HIDEFOLLOW CSS
@@ -1082,7 +1135,8 @@ table {
 
 .table-striped tbody > tr:nth-child(odd) > td,
 .table-striped tbody > tr:nth-child(odd) > th {
-  background-color: #f9f9f9; }
+  background-color: #d4d4d4;
+  /*color: white;*/ }
 
 .table-hover tbody tr:hover > td,
 .table-hover tbody tr:hover > th {

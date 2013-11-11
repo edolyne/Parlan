@@ -144,7 +144,8 @@ table {
 
 .table-striped tbody > tr:nth-child(odd) > td,
 .table-striped tbody > tr:nth-child(odd) > th {
-  background-color: $ltgrey;
+  background-color: #d4d4d4;
+    /*color: white;*/
 }
 
 .table-hover tbody tr:hover > td,

@@ -91,6 +91,41 @@
     }
 }
 
+/* Green Outlined Button */
+
+.green-btn-outline {
+    border-radius: 2px;
+    border: 2px solid $green;
+    color: $green;
+    font-family: PTSerif, serif;
+    display: block;
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1em;
+    @include box-sizing(border-box);
+    line-height: 1.25em;
+    
+    a {
+        color: $green;
+        text-decoration: none;
+        display: block;
+        
+        &:hover {
+            color: $offwhite;
+            text-decoration: none;
+        }
+    }
+    
+    &:hover {
+        text-decoration: none;
+        background: $green;
+        
+        a {
+            color: $offwhite !important;
+        }
+    }
+}
+
 /* Blue Outlined Button */
 
 .blue-btn-outline {
