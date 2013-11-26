@@ -49,7 +49,7 @@
 
 		.learn-more {
 			color: $green;
-			margin-top: 1.25em;
+			margin-bottom: 1em;
 			cursor: pointer;
 
 			&:hover {
@@ -57,12 +57,35 @@
 			}
 
 		}
+        
+        .hidden {
+            max-height: 0;
+            display: block;
+            overflow: hidden;
+            visibility: visible;
+            @include transition (1.5s);
+        }
+        
+        .show {
+            max-height: 100em;
+            display: block;
+            overflow: hidden;
+            @include transition (1.5s);
+        }
 
 		.bio {
 
 			margin: 1em 0;
+            
+            p {
+                margin-bottom: 0;
+            }
 
 		}
+        
+        .bio-more {
+            margin-bottom: 2em;
+        }
         
         .social-following {
             
@@ -366,3 +389,77 @@ a.topic-link {
     text-align: center;
     padding-bottom: 4em;
 }
+
+/* Client Login */
+
+.company-login {
+    display: block;
+    margin: 2em 0;
+    
+    .logo {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        width: 25%;
+        
+        .widget-type-linked_image {
+            width: 100%
+        }
+        
+        img {
+            width: 100% !important;
+        }
+    }
+    
+    .description {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        width: 49%;
+        
+        .widget-type-text {
+            width: 100%;
+        }
+    }
+    
+    .login-cta {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        width: 25%;
+        
+        .widget-type-cta {
+            width: 100%;
+            border-radius: 2px;
+            border: 2px solid $green;
+            color: $green;
+            font-family: PTSerif, serif;
+            display: block;
+            text-align: center;
+            padding: 0.5em;
+            font-size: 1em;
+            @include box-sizing(border-box);
+            line-height: 1.25em;
+            
+            &:hover {
+                background: $green;
+                
+                a {
+                    color: $offwhite;
+                }
+            }
+            
+            a {
+                color: $green;
+                text-decoration: none;
+                display: block;
+                
+                &:hover {
+                    color: $offwhite;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+

@@ -672,6 +672,24 @@ ul {
     }
 }
 
+.hs-blog-name-parlan-financial-blog {
+    
+    .footer {
+        
+        .footer-contact p {
+            font-size: 0.75em !important;
+            letter-spacing: 0 !important;
+        }
+    }
+
+    .sub-footer {
+        
+        p {
+            font-size: 1em !important;
+        }
+    }
+}
+
 .sub-footer {
     background: $black;
     color: $greyblack;
@@ -680,11 +698,20 @@ ul {
     .sub-footer-menu {
         
         a {
-            color: $green;
+            color: $offwhite;
             padding: 0.5em 2.5em 0 0 !important;
+            text-decoration: underline !important;
             
             &:hover {
                 color: $drkgreen;
+            }
+        }
+        
+        ul {
+            list-style: none;
+            
+            li {
+                list-style: none;
             }
         }
     }
@@ -743,6 +770,8 @@ ul {
 
 .hs-menu-wrapper.hs-menu-flow-horizontal>ul li.hs-item-has-children ul.hs-menu-children-wrapper {
     z-index: 999 !important;
+    top: 2em;
+    min-width: 11em;
 }
 
 .hs-menu-wrapper.hs-menu-flow-horizontal>ul li.hs-item-has-children ul.hs-menu-children-wrapper li a {

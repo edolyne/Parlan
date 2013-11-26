@@ -256,6 +256,8 @@ p {
   list-style-position: inside;
   padding: 0.5em 0 0.5em 1.25em;
   text-indent: -1em; }
+  .content li p {
+    margin: 0; }
 .content .right-sidebar ul a {
   color: #222222; }
 .content .right-sidebar ul li {
@@ -469,12 +471,31 @@ p {
     margin: 0; }
   .our-team .employee .learn-more {
     color: #287114;
-    margin-top: 1.25em;
+    margin-bottom: 1em;
     cursor: pointer; }
     .our-team .employee .learn-more:hover {
       text-decoration: underline; }
+  .our-team .employee .hidden {
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    visibility: visible;
+    -webkit-transition: 1.5s;
+    -moz-transition: 1.5s;
+    transition: 1.5s; }
+  .our-team .employee .show {
+    max-height: 100em;
+    display: block;
+    overflow: hidden;
+    -webkit-transition: 1.5s;
+    -moz-transition: 1.5s;
+    transition: 1.5s; }
   .our-team .employee .bio {
     margin: 1em 0; }
+    .our-team .employee .bio p {
+      margin-bottom: 0; }
+  .our-team .employee .bio-more {
+    margin-bottom: 2em; }
   .our-team .employee .social-following h4 {
     display: inline-block;
     vertical-align: middle;
@@ -705,6 +726,57 @@ a.topic-link {
   text-align: center;
   padding-bottom: 4em; }
 
+/* Client Login */
+.company-login {
+  display: block;
+  margin: 2em 0; }
+  .company-login .logo {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 25%; }
+    .company-login .logo .widget-type-linked_image {
+      width: 100%; }
+    .company-login .logo img {
+      width: 100% !important; }
+  .company-login .description {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 49%; }
+    .company-login .description .widget-type-text {
+      width: 100%; }
+  .company-login .login-cta {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 25%; }
+    .company-login .login-cta .widget-type-cta {
+      width: 100%;
+      border-radius: 2px;
+      border: 2px solid #287114;
+      color: #287114;
+      font-family: PTSerif, serif;
+      display: block;
+      text-align: center;
+      padding: 0.5em;
+      font-size: 1em;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      line-height: 1.25em; }
+      .company-login .login-cta .widget-type-cta:hover {
+        background: #287114; }
+        .company-login .login-cta .widget-type-cta:hover a {
+          color: #f9f9f9; }
+      .company-login .login-cta .widget-type-cta a {
+        color: #287114;
+        text-decoration: none;
+        display: block; }
+        .company-login .login-cta .widget-type-cta a:hover {
+          color: #f9f9f9;
+          text-decoration: none; }
+
 /*
   HIDEFOLLOW CSS
 */
@@ -784,6 +856,11 @@ a.follow {
 ===============================================*/
 .hs-landing-page .header-container-wrapper {
   padding-top: 1em; }
+.hs-landing-page .landing-header .widget-type-logo {
+  margin-bottom: 1em; }
+.hs-landing-page .landing-header .phone {
+  font-size: 1.25em;
+  margin-top: 0.75em; }
 .hs-landing-page .bodyWrapper {
   margin-top: 3em; }
 .hs-landing-page .landing-page-form {
@@ -804,7 +881,7 @@ a.follow {
   .hs-landing-page .landing-page-form .input select {
     width: 100%;
     background: url(../assets/down_arrow.png) no-repeat right white;
-    background-size: 18%;
+    background-size: 10%;
     padding: 0.75em;
     font-size: 1em;
     font-family: PTSerif, serif;
@@ -1685,15 +1762,26 @@ ul {
       .footer .footer-subscribe .hs-button:hover {
         cursor: pointer; }
 
+.hs-blog-name-parlan-financial-blog .footer .footer-contact p, .footer .hs-blog-name-parlan-financial-blog .span3 .footer-contact p {
+  font-size: 0.75em !important;
+  letter-spacing: 0 !important; }
+.hs-blog-name-parlan-financial-blog .sub-footer p {
+  font-size: 1em !important; }
+
 .sub-footer {
   background: #111111;
   color: #4c4b4b;
   font-size: 0.75em; }
   .sub-footer .sub-footer-menu a {
-    color: #287114;
-    padding: 0.5em 2.5em 0 0 !important; }
+    color: #f9f9f9;
+    padding: 0.5em 2.5em 0 0 !important;
+    text-decoration: underline !important; }
     .sub-footer .sub-footer-menu a:hover {
       color: #2b5520; }
+  .sub-footer .sub-footer-menu ul {
+    list-style: none; }
+    .sub-footer .sub-footer-menu ul li {
+      list-style: none; }
   .sub-footer p {
     padding: 0.5em 0;
     margin: 0;
@@ -1725,7 +1813,9 @@ ul {
 
 /* Hubspot Override */
 .hs-menu-wrapper.hs-menu-flow-horizontal > ul li.hs-item-has-children ul.hs-menu-children-wrapper {
-  z-index: 999 !important; }
+  z-index: 999 !important;
+  top: 2em;
+  min-width: 11em; }
 
 .hs-menu-wrapper.hs-menu-flow-horizontal > ul li.hs-item-has-children ul.hs-menu-children-wrapper li a {
   width: 100% !important; }
