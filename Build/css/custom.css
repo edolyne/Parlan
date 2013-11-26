@@ -1433,13 +1433,15 @@ header {
             padding: 0 1.5em !important; }
             header .menu ul li ul li a {
               width: 240px; }
-  header .phone h3 {
-    font-size: 1em;
-    font-style: italic;
-    margin: 0;
-    line-height: 2em;
-    color: #f9f9f9;
-    text-align: right; }
+  header .phone {
+    margin-top: 1em; }
+    header .phone h3 {
+      font-size: 1em;
+      font-style: italic;
+      margin: 0;
+      line-height: 2em;
+      color: #f9f9f9;
+      text-align: right; }
   header .search {
     float: right !important; }
     header .search label {
