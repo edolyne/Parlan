@@ -8,6 +8,7 @@
 @import "landing-pages";
 @import "dropdown-styling";
 @import "tables";
+@import "print";
 
 .clear {
     clear: both;
@@ -160,7 +161,7 @@ header {
         margin-top: 1em;
         
         h3 {
-            font-size: 1em;
+            font-size: 1.1em;
             font-style:italic;
             margin: 0;
             line-height: 2em;
@@ -171,7 +172,7 @@ header {
     }
 
     .search {
-
+        margin-top: 1em;
         float: right !important;
 
         label {
@@ -189,21 +190,28 @@ header {
             color: $offwhite;
             font-family: PTSerif, serif;
             @include box-sizing(border-box);
+            
         }
 
         a {
             text-align: right;
             float: right;
             color: $offwhite;
+            position: relative;
+            top: -1.8em;
+            left: -0.5em;
+            cursor: pointer;
 
             &:hover {
                 text-decoration: none;
             }
         }
+        
     }
 }
 
 .client-login {
+    margin-top: 1em;
     font-size: 1em;
     width: 100%;
     
@@ -319,7 +327,7 @@ ul {
     }
 
     h3 {
-        font-size: 1.25em;
+        font-size: 1.5em;
         min-height: 84px;
         margin-top: 0;
         color: $offwhite;
@@ -328,16 +336,19 @@ ul {
 
     h4 {
         font-size: 1.15em;
+        color: $ltblue;
+        font-weight: bold;
     }
 
     ul {
         padding-left: 0;
+        margin: 0 0 1.5em 0;
         
         li {
-            list-style-type: disc;
+            padding: 0.25em 0 0.1em;
+            font-size: 1em;
             list-style-position: inside;
-            padding: 10px 0 10px 20px;
-            text-indent: -1em;
+            list-style-type: disc;
         }
     }
 
@@ -399,11 +410,11 @@ ul {
     }
 
     a {
-        text-decoration: none;
+        text-decoration: underline;
         color: $blue;
 
         &:hover {
-            text-decoration: underline;
+            color: $ltblue;
         }
     }
 }
@@ -423,6 +434,7 @@ ul {
 
         h2 {
             color: $offwhite;
+            font-size: 3em;
         }
 
         h5 {
@@ -504,6 +516,10 @@ ul {
     .cta-btns {
         margin: 2em 0 0;
     }
+    
+    .row-number-2 {
+        margin-top: 1.5em;
+    }
 }
 
 .location-footer {
@@ -557,11 +573,11 @@ ul {
         position: relative;
 
         p {
-            font-size: 0.8em;
+            font-size: 0.7em !important;
             margin: 0;
-            letter-spacing: 0.168px;
             color: $offwhite !important;
-
+            letter-spacing: 0.6px;
+            
             .left {
                 float: left;
                 font-size: 1.15em;
@@ -722,6 +738,7 @@ ul {
         margin: 0;
         color: $greyblack !important;
         text-align: right;
+        font-size: 1em !important;
     }
     
     a {
@@ -738,7 +755,6 @@ ul {
 /* Sidebar */
 
 .sidebar-menu {
-    margin-top: 6em;
     margin-bottom: 3em;
     
     a:hover {text-decoration: underline !important;}

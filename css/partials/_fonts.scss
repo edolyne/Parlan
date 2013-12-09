@@ -1,8 +1,8 @@
-@include font-face(PTSerif, 'http://impactgit.wpengine.com/parlan/fonts/PTSerif/PTF55F-webfont');
-@include font-face(PTSans, 'http://impactgit.wpengine.com/parlan/fonts/PTSans/PTS55F-webfont');
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
 
 body {
-    font-family: PTSans, sans-serif;
+    font-family: 'PT Sans', sans-serif;
     font-size: 1em;
     line-height: 1.4em;
 }
@@ -16,14 +16,15 @@ a {
 }
 
 h1,h2,h3,h4,h5 {
-    font-family: PTSerif, serif;
+    font-family: 'PT Serif', serif;
     line-height: 1.25em;
+    font-weight: normal;
 }
 
 h1 {
     font-size: 2.75em;
     color: $blue;
-    margin:0 0 35px 0;
+    margin:0 0 0.5em 0;
 }
 
 h2 {
@@ -36,7 +37,7 @@ h2 {
 h3 {
     font-size: 1.65em;
     margin:7px 0 10px 0;
-    color:#666
+    color:#666;
 }
 
 h4 {
@@ -50,7 +51,8 @@ h5 {
 
 h6 {
 	font-size: 1.25em;
-	font-family: PTSans, sans-serif;
+	font-family: 'PT Sans', sans-serif;
+    font-weight: normal;
 }
 
 p {font-size: 1.12em;line-height: 1.5em;

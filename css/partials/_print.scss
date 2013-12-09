@@ -1,0 +1,23 @@
+@media print {
+    
+    .header-container-wrapper {
+        display: none;
+    }
+    
+    .arrow {
+        display: none;
+    }
+    
+    .wistia_embed {
+        display: none;
+    }
+    
+    .right-sidebar {
+        display: none;
+    }
+    
+    .left {
+        width: 100%;
+    }
+
+}

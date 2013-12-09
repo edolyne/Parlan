@@ -4,11 +4,15 @@
 	.page-title {
 
 		h1 {
-			padding-bottom: 0.15em;
+			/*padding-bottom: 0.15em;*/
 			/*border-bottom: $blue 2px solid;*/
 		}
 
 	}
+    
+    .left {
+        padding-right: 3em;
+    }
 }
 
 #sidebar-cta {
@@ -16,7 +20,7 @@
     width: 15em;
     
     h2 {
-        font-size: 2em;
+        font-size: 1.75em;
     }
 }
 
@@ -53,7 +57,8 @@
 			cursor: pointer;
 
 			&:hover {
-				text-decoration: underline;
+				text-decoration: none;
+                color: $drkgreen;
 			}
 
 		}
@@ -142,12 +147,26 @@
 /* Resources */
 
 .resources-cta {
-
-	margin: 2em 0;
+    display: block;
+    margin: 3em auto 0;
+	
+	.resource-column {
+		width: 32%;
+		padding: 0 3%;
+		display: inline-block;
+		vertical-align: top;
+		margin: 3em 0;
+		@include box-sizing(border-box);
+		float: none;
+		
+		&.mid-col {
+			margin: 3em 0 !important;
+		}
+	}
 	
 	.hs_cos_wrapper_type_cta {
 		display: inline-block;
-		width: 33%;
+		width: 32%;
 		vertical-align: top;
 
 		img {
@@ -203,6 +222,11 @@
 	
 	a {
 		text-decoration: none;
+        color: $blue;
+        
+        &:hover {
+            text-decoration: underline;
+        }
 	}
 }
 
@@ -220,6 +244,10 @@ a.more-link {
 	}
 }
 
+#hubspot-topic_data {
+    margin-top: 1em;
+}
+
 a.topic-link {
 	background: #f6f6f6;
 	border: #CCC 1px solid;
@@ -228,10 +256,10 @@ a.topic-link {
 	padding: 0.25em 0.5em;
 	text-decoration: none;
 	display: inline-block;
-	margin: 0.5em 0;
+	margin: 0.75em 0.25em;
 
 	&:hover {
-		background: $green;
+		background: $blue;
 		color: $offwhite;
 	}
 }
@@ -239,10 +267,17 @@ a.topic-link {
 .sidebar {
     
     h3 {
-        background: #f9f9f9;
+        background: #f6f6f6;
         padding: 0.5em;
-        border-bottom: #287114 5px solid;
+        border-top: #CCC 1px solid;
+        border-bottom: #CCC 5px solid;
         margin-bottom: 1em;
+        color: #333;
+        margin-top: 0;
+    }
+    
+    a {
+        color: $blue;
     }
     
     .sticky-wrapper {
@@ -258,21 +293,81 @@ a.topic-link {
     }
 }
 
-.blog-email-subscribe {
+.blog-search {
+    background: #f9f9f9;
+    
+    label {
+        background: #f9f9f9;
+        padding: 0.5em;
+        border-top: #CCC 1px solid;
+        border-bottom: #CCC 5px solid;
+        margin-bottom: 1em;
+        display: block;
+        font-size: 1.65em;
+        margin: 7px 0 10px 0;
+        color: #333;
+        font-family: 'PT Serif', serif;
+        font-weight: normal;
+        margin-top: 0;
+    }
+    
+    .input {
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+    }
+    
+    input {
+        border: #CCC 1px solid;
+    	border-radius: 2px;
+    	padding: 1em 0.5em;
+    	color: $drkgrey;
+        font-size: 1.25em;
+    }
+    
+    a {
+        position: relative;
+        top: -1.95em;
+        float: right;
+        padding-right: 1em;
+        color: $blue;
+    }
+}
 
-	margin: 2em 0 1em;
+.social-share-data {
+    margin: 2em 0;
+ 
+    div {
+        margin-right: 2em;
+    }
+}
+
+.connect {
+    margin: 2em 0;
+    background: #f9f9f9;
+}
+
+.blog-email-subscribe {
+	margin: 0 0 1em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    
+    h3 {
+        border-top: none;
+        border-bottom: none;
+        background: transparent;
+        padding: 0;
+        font-size: 1.3em;
+    }
 
 	.input {
 
 		input {
 
-			border: $drkgrey 2px solid;
+			border: #CCC 1px solid;
 			border-radius: 2px;
-			padding: 1em 0.5em;
 			color: $drkgrey;
-
+            font-size: 1.25em;
 		}
-
 	}
 	
 	.actions {
@@ -283,6 +378,7 @@ a.topic-link {
 			padding: 0.25em;
 			margin: 0.25em 0;
             cursor: pointer;
+            font-size: 1.25em;
 
 			&:hover {
 				@include btn-hover;
@@ -292,17 +388,43 @@ a.topic-link {
 
 }
 
-.blog-recent-posts {
+.widget-type-follow_me {
+    margin: 1em 0;
+    padding: 0 0.75em;
+    
+    h3 {
+        margin: 0;
+        border-top: none;
+        border-bottom: none;
+        background: transparent;
+        padding: 0;
+        font-size: 1.3em;
+    }
+    
+    div {
+        margin-top: 0.5em;
+    }
+    
+    a {
+        width: 25%;
+        display: inline-block;
+    }
+}
 
+.blog-recent-posts {
+    background: #f9f9f9;
 	margin: 1em 0;
 	
 	ul {
-		padding: 1em;
-
+		padding: 0.75em;
+        padding-top: 0;
+        margin: 0;
+        display: block;
 
 		li {
 			list-style: none;
 			padding: 0.5em 0;
+            text-indent: 0;
 
 			a {
 				text-decoration: none;
@@ -316,6 +438,57 @@ a.topic-link {
     img {
         
         padding: 1em;
+    }
+}
+
+@mixin dashed-border($dashlength, $spacelength, $borderwidth, $color, $position: top) {
+  $per: percentage($dashlength / ($dashlength + $spacelength));
+  background-image: linear-gradient(to right, $color 0%, $color $per, rgba(0, 0, 0, 0) $per);
+  background-position: 0 $position; 
+  background-size: ($dashlength + $spacelength) $borderwidth;
+  background-repeat: repeat-x;
+}
+
+.post-seperator {
+    margin: 3em 0;
+    
+    &:before {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        margin-top: 40px;
+        @include dashed-border(11px, 6px, 2px, #CCC);
+    }
+}
+
+.blog-pagination {
+    text-align: center;
+    display: block;
+    margin: 2em auto 0;
+    
+    a {
+        text-decoration: none;
+        color: $blue;
+        padding: 0.5em 1.5em;
+        display: inline-block;
+        
+        &:hover {
+            background: $blue;
+            color: $offwhite;
+        }
+    }
+    
+    .all-posts-link {
+        
+    }
+    
+    .next-posts-link {
+        border-left: #ccc 1px solid;
+    }
+    
+    .previous-posts-link {
+        border-right: #ccc 1px solid;
     }
 }
 
@@ -360,6 +533,22 @@ a.topic-link {
 	}
 }
 
+.about-author {
+    background: #f6f6f6;
+    border: #ccc 1px solid;
+    border-radius: 4px;
+    padding: 1em;
+    
+    .headshot {
+        display: inline-block;
+    }
+    
+    .bio {
+        display: inline-block;
+    }
+    
+}
+
 /* Modals */
 .overlay{
     width: 100%;
@@ -391,31 +580,59 @@ a.topic-link {
 }
 
 /* Client Login */
+    
+.hs-content-name-client-login {
+        
+        .resources-cta {
+            margin-top: 0;
+        }
+    }
 
 .company-login {
     display: block;
     margin: 2em 0;
     
     .logo {
-        display: inline-block;
-        vertical-align: middle;
         text-align: center;
-        width: 25%;
+        max-width: 75%;
+        min-width: 50%;
+        margin: 0 auto;
+        display: table;
+        min-height: 13em;
         
+        &:before {
+            content: '';
+            display: inline-table;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -0.25em;
+        }
+            
         .widget-type-linked_image {
-            width: 100%
+            display: inline-table;
+            vertical-align: middle;
+            float: none;
         }
         
-        img {
-            width: 100% !important;
+        .logo-img {
+            display: inline-block;
+            vertical-align: middle;
+            
+            &:before {
+                content: '';
+                display: inline-block;
+                height: 100%;
+                vertical-align: middle;
+                margin-right: -0.25em;
+            }
         }
     }
     
     .description {
-        display: inline-block;
-        vertical-align: middle;
         text-align: center;
-        width: 49%;
+        margin: 2em auto;
+        width: 75%;
+        display: block;
         
         .widget-type-text {
             width: 100%;
@@ -423,10 +640,11 @@ a.topic-link {
     }
     
     .login-cta {
-        display: inline-block;
+        display: block;
         vertical-align: middle;
         text-align: center;
-        width: 25%;
+        width: 75%;
+        margin: 2em auto;
         
         .widget-type-cta {
             width: 100%;
