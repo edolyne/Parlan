@@ -8,7 +8,8 @@
 @import "landing-pages";
 @import "dropdown-styling";
 @import "tables";
-@import "print";
+
+.print-only {display: none;}
 
 .clear {
     clear: both;
@@ -643,9 +644,12 @@ ul {
 
         .hs_email {
 
-            width: 73%;
+            width: 100%;
             display: inline-block;
+        }
 
+        .hs-form fieldset.form-columns-1.hs-input {
+            width: 100%;
         }
 
         .hs_submit {
@@ -653,8 +657,12 @@ ul {
             display: inline-block;
         }
 
+        fieldset {
+            display: inline-block;
+        }
+
         .hs-input {
-            width: 100%;
+            width: 100% !important;
             background: transparent;
             border: $offwhite 2px solid;
             border-radius: 2px 0 0 2px;

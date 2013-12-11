@@ -1490,21 +1490,9 @@ table th[class*="span"],
   background-position: 14px 14px;
   background-repeat: no-repeat; }
 
-@media print {
-  .header-container-wrapper {
-    display: none; }
+.print-only {
+  display: none; }
 
-  .arrow {
-    display: none; }
-
-  .wistia_embed {
-    display: none; }
-
-  .right-sidebar {
-    display: none; }
-
-  .left {
-    width: 100%; } }
 .clear {
   clear: both; }
 
@@ -1909,13 +1897,17 @@ ul {
       width: 100%;
       display: inline-block; }
     .footer .footer-subscribe .hs_email {
-      width: 73%;
+      width: 100%;
       display: inline-block; }
+    .footer .footer-subscribe .hs-form fieldset.form-columns-1.hs-input {
+      width: 100%; }
     .footer .footer-subscribe .hs_submit {
       width: 24%;
       display: inline-block; }
+    .footer .footer-subscribe fieldset {
+      display: inline-block; }
     .footer .footer-subscribe .hs-input {
-      width: 100%;
+      width: 100% !important;
       background: transparent;
       border: #f9f9f9 2px solid;
       border-radius: 2px 0 0 2px;

@@ -1,0 +1,152 @@
+@media print {
+    
+    .print-only {display: block !important;}
+
+    * {
+        text-shadow: none !important;
+        color: #000 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        filter: none !important;
+        -ms-filter: none !important;
+        border: none !important;
+    }
+
+    body {
+        font-size: 0.8em !important;
+    }
+    
+    a, a:visited {
+        text-decoration: underline;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    
+    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+        content: "";
+    }
+    
+    pre, blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    
+    thead {
+        display: table-header-group; // h5bp.com/t
+    }
+    
+    tr, img {
+        page-break-inside: avoid;
+    }
+    
+    img {
+        max-width: 100% !important;
+    }
+    
+    @page {
+        margin: 1cm;
+    }
+    
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    
+    h2, h3 {
+        page-break-after: avoid;
+    }
+
+
+    .sidebar {display: none;}
+
+    a, p, blockquote, h1, h2, h3, h4, h5, h6, span {
+        color: #000 !important;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+    }
+
+    center, .trading-news .header {
+        text-align: left !important;
+    }
+
+    .mobile-value {padding-bottom: 0;}
+
+    .buyerpersona-blog {
+        * {height: auto !important;}
+        div {margin: 10px 0;}
+    }
+
+    .parlan-process {
+        display: block !important;
+    }
+
+    .header-container-wrapper {
+        display: none;
+    }
+
+    .widget-type-cta {
+        display: none !important;
+    }
+    
+    .blog-icon {
+        display: none !important;
+    }
+
+    span.arrow {
+        display: none !important;
+    }
+    
+    .wistia_embed {
+        display: none;
+    }
+    
+    .hidden-phone {
+        display: block !important;
+    }
+
+    .right-sidebar {
+        display: none !important;
+    }
+    
+    .left {
+        width: 100% !important;
+    }
+
+    .trading-news {
+        border: none;
+        color: black;
+    
+        h2 {
+            color: black;
+        }
+
+        .header {margin-bottom: 0;}
+    }
+
+    .footer-container-wrapper {
+        display: none;
+    }
+
+    .print-cta {
+        border: #000 4px solid !important;
+        text-align: center !important;
+        padding: 0.5cm 1.15cm;
+    }
+
+    .print-cta h3 {
+        text-align: center !important;
+        text-transform: capitalize;
+    }
+    
+    .print-cta p {
+        margin-bottom: 0;
+        text-align: center !important;
+    }
+}
