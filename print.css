@@ -62,9 +62,6 @@
         page-break-after: avoid;
     }
 
-
-    .sidebar {display: none;}
-
     a, p, blockquote, h1, h2, h3, h4, h5, h6, span {
         color: #000 !important;
         text-align: left;
@@ -78,75 +75,87 @@
 
     .mobile-value {padding-bottom: 0;}
 
-    .buyerpersona-blog {
-        * {height: auto !important;}
-        div {margin: 10px 0;}
-    }
+    .row-fluid-wrapper .row-fluid-wrapper {padding: 0 !important;}
 
-    .parlan-process {
+    .banner-cta .hidden-phone {display: block !important;}
+
+    .hidden-phone .parlan-process {
         display: block !important;
     }
 
+    .widget-type-cta,
+    .blog-icon,
+    .hs-site-page span.arrow,
+    .wistia_embed,
+    .right-sidebar,
+    .footer-container-wrapper,
+    .blog-pagination,
+    .social-share-data,
+    .post-footer,
+    .hs-cta-wrapper,
+    .about-author,
+    .sidebar,
+    .buyerpersona-blog img,
     .header-container-wrapper {
         display: none;
     }
 
-    .widget-type-cta {
-        display: none !important;
-    }
-    
-    .blog-icon {
-        display: none !important;
-    }
-
-    span.arrow {
-        display: none !important;
-    }
-    
-    .wistia_embed {
-        display: none;
-    }
-    
-    .hidden-phone {
+    .hs-site-page .hidden-phone {
         display: block !important;
     }
 
-    .right-sidebar {
-        display: none !important;
-    }
-    
     .left {
         width: 100% !important;
     }
 
-    .trading-news {
-        border: none;
-        color: black;
+    .value-prop {padding-bottom:0 !important;margin-bottom:0 !important;}
+    .value-prop p {display: none !important;}
+    .value-prop h3 {margin-bottom:0 !important;}
+
+    .banner-cta {padding: 0 !important;}
+    .banner-cta .header {margin-bottom:0 !important;}
+
+    .visible-phone .mobile-value {display: none !important;}
     
-        h2 {
-            color: black;
-        }
+    .bodyWrapper {padding: 0 !important;}
 
-        .header {margin-bottom: 0;}
-    }
+    .buyerpersona-blog {padding-top: 0 !important;padding-bottom: 0 !important;margin: 0 !important;}
+    .buyerpersona-blog * {min-height: 0 !important; height: auto !important;}
+    .buyerpersona-blog div {margin: 10px 0;}
+    .buyerpersona-blog h3 {min-height:0; margin: 0 !important;margin-bottom:0 !important;padding: 0 !important;}
+    .buyerpersona-blog .row-fluid-wrapper .row-fluid-wrapper {padding: 0 !important;}
 
-    .footer-container-wrapper {
-        display: none;
-    }
+    .parlan-process {padding: 0 !important;}
+    .parlan-process img {display: none !important;}
+    .parlan-process h2 {text-align: left !important; margin-bottom: 0 !important;padding: 0 !important;}
+    .parlan-process a {height: auto !important; min-height: 0 !important;padding-top: 0 !important; margin-top: 0 !important;}
+    .parlan-process p {height: auto !important; min-height: 0 !important;padding-top: 0 !important; margin-top: 0 !important;margin-bottom: 0.5em !important;}
+    .parlan-process .row-fluid {margin: 0 !important;}
+    .parlan-process h4 {margin-bottom: 0 !important;}
 
-    .print-cta {
-        border: #000 4px solid !important;
-        text-align: center !important;
-        padding: 0.5cm 1.15cm;
-    }
+    .trading-news {border: none; color: black; margin: 0 !important; padding: 0 !important;}
+    .trading-news h2 {color: black;}
+    .trading-news .header {margin: 0 !important;}
+    .trading-news .row-fluid-wrapper .row-fluid-wrapper .row-depth--4 .row-number-2  {margin: 0 !important;}
+    .trading-news .row-fluid-wrapper {margin: 0 !important; padding: 0 !important;}
+    .timestamp-tweets ul {margin: 0 !important;}
+    .timestamp-tweets ul li {padding: 0 !important;margin: 0 !important;}
 
-    .print-cta h3 {
-        text-align: center !important;
-        text-transform: capitalize;
-    }
+    .home-ebook {margin: 0 !important; padding: 0 !important;}
+    .home-ebook img {float: left !important; width: 25% !important; margin-right: 5% !important; height:auto !important;}
+    .home-ebook ul {margin-bottom:0 !important;}
+
+    .print-cta {border: #000 4px solid !important; text-align: center !important; padding: 0.5cm 1.15cm;}
+
+    .print-cta h3 {text-align: center !important; text-transform: capitalize;}
     
     .print-cta p {
         margin-bottom: 0;
         text-align: center !important;
     }
+
+    .post-body img {
+        max-width: 40% !important;
+    }
+    
 }

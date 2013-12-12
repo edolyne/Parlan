@@ -264,6 +264,17 @@ a.topic-link {
 	}
 }
 
+.post-listing .post-item p img {
+    max-width: 50% !important;
+    height: auto;
+    margin-left: 25px !important;
+    margin-bottom: 25px !important;
+    margin-top: 0 !important;
+    float: right;
+    border-radius: 4px;
+    padding: 0;
+}
+
 .sidebar {
     
     h3 {
@@ -406,7 +417,7 @@ a.topic-link {
     }
     
     a {
-        width: 25%;
+        width: 20%;
         display: inline-block;
     }
 }

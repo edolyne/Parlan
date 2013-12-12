@@ -624,6 +624,16 @@ a.topic-link {
     background: #263a58;
     color: #f9f9f9; }
 
+.post-listing .post-item p img {
+  max-width: 50% !important;
+  height: auto;
+  margin-left: 25px !important;
+  margin-bottom: 25px !important;
+  margin-top: 0 !important;
+  float: right;
+  border-radius: 4px;
+  padding: 0; }
+
 .sidebar h3 {
   background: #f6f6f6;
   padding: 0.5em;
@@ -742,7 +752,7 @@ a.topic-link {
   .widget-type-follow_me div {
     margin-top: 0.5em; }
   .widget-type-follow_me a {
-    width: 25%;
+    width: 20%;
     display: inline-block; }
 
 .blog-recent-posts {
