@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type='text/javascript' src='js/jquery.modal.js'></script>
+        <script type='text/javascript' src='js/site.js'></script>
+        
+        <style>
+            .overlay{
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1000;
+                display: none;
+            }
+
+            .modal{
+                display: none;
+                background:#eee;
+                padding:0 20px 20px;
+                overflow:auto;
+                z-index:1001;
+                position:absolute;
+                width: 500px;
+                min-height: 300px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        
+        
+        <a class="clientLogin" href="#">Client Login</a>
+
+        <div class="overlay"></div>
+        
+        <div class="modal">
+        
+            <a href="#" class="closeBtn">Close Me</a>
+        
+            <!-- content here -->
+        
+        </div>
+        
+        <input id="username"></input>
+        <a id="login" href="#">Client Login</a>
+    
+    </body>
+    
+    
+    
+    <script>
+            $(document).ready(function() {
+            
+            $('.modalLink').modal({
+                trigger: '.modalLink',
+                olay:'div.overlay',
+                modals:'div.modal',
+                animationEffect: 'slidedown',
+                animationSpeed: 400,
+                moveModalSpeed: 'slow',
+                background: '00c2ff',
+                opacity: 0.8,
+                openOnLoad: false,
+                docClose: true,
+                closeByEscape: true,
+                moveOnScroll: true,
+                resizeWindow: true,
+                video:'http://player.vimeo.com/video/9641036?color=eb5a3d',
+                close:'.closeBtn'
+            });
+  
+            //when button is clicked  
+            $('#login').click(function(){   
+                if($('#username').val() == 'elong@impactbnd.com' ) { 
+                      window.open('http://www.google.com', '_blank');
+                      return false;
+                }else if($('#username').val() == 'ed@impactbnd.com' ) { 
+                      window.open('http://www.impactbnd.com', '_blank');
+                      return false;
+                }else {
+                    alert("No Such User Exists");
+                }
+            });  
+  
+  });
+        </script>
+</html>
